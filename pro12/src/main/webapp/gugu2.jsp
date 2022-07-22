@@ -17,16 +17,17 @@
 			<td colspan='2'><%=dan%>단 출력</td>
 		</tr>
 	<%
-for(int i=1; i<10; i++){
+for(int i=1; i<=dan; i++){
 %>
+<% for(int k=1; k<10; k++){ %>
 	<%
 if(i%2==1){
 %>
 	<tr align='center' bgcolor="#aabb66">
-			<td width='400'><%=dan%> * <%=i %>
+			<td width='400'><%=i%> * <%=k %>
 			</td>
 			<td width='400'>
-			<%=i*dan  %>
+			<%=i*k  %>
 			</td>
 	</tr>
 	
@@ -36,14 +37,15 @@ if(i%2==1){
 %>
 	
 	<tr align='center' bgcolor="#ccdd66">
-			<td width='400'><%=dan%> * <%=i %>
+			<td width='400'><%=i%> * <%=k %>
 			</td>
 			<td width='400'>
-			<%=i*dan  %>
+			<%=i*k  %>
 			</td>
 	</tr>
 		<%
 	}
+}
 }
 %>
 
