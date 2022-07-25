@@ -15,6 +15,6 @@
 <input type="submit" value="로그인" /> <input type="reset" value="다시입력" />
 </form>
 <br><br>
-<a href="${contextPath}/test/memberForm.jsp">회원가입하기</a>
+<a href="${contextPath}/test2/memberForm.jsp">회원가입하기</a>
 </body>
 </html>

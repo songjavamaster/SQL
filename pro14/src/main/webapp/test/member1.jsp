@@ -31,6 +31,13 @@
 <td>${age}</td>
 <td>${height}</td>
 </tr>
+<tr align="center">
+<td><%=request.getParameter("id") %></td>
+<td><%=request.getParameter("pwd") %></td>
+<td><%=request.getParameter("name") %></td>
+<td><%=request.getParameter("age") %></td>
+<td><%=request.getParameter("height") %></td>
+</tr>
 </table>
 </body>
 </html>

@@ -7,10 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="post" action="member9.jsp">
-<h1 style="text-align:center">회원 등록창</h1>
-<table align="certer">
-
+<form method="post" action="member3.jsp">
+<h1 style="text-align:center">회원 가입창</h1>
+<table>
 <tr>
 <td width="200"><p align="right">아이디</p></td>
 <td width="200"><input type="text" name="id"></td>
