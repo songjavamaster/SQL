@@ -3,10 +3,10 @@
     isELIgnored="false"%>
     <%
     request.setCharacterEncoding("utf-8");
-    String id=request.getParameter("id");
-    String pwd=request.getParameter("pwd");
-    String name=request.getParameter("name");
-    String email=request.getParameter("email");
+    String id = (String)request.getAttribute("id");
+    String pwd = (String)request.getAttribute("pwd");
+    String name = (String)session.getAttribute("name");
+    String email = (String)application.getAttribute("email");
 %>
 <!DOCTYPE html>
 <html>
@@ -18,7 +18,7 @@
 <table align="center" border="1">
 <tr align="center" bgcolor="#99ccff">
 <td width="20%"><b>아이디</b></td>
-<td width="20%"><b>비일번호</b></td>
+<td width="20%"><b>비밀번호</b></td>
 <td width="20%"><b>이름</b></td>
 <td width="20%"><b>이메일</b></td>
 </tr>
@@ -29,10 +29,10 @@
 <td><%=email %></td>
 </tr>
 <tr align="center">
-<td>${param.id }</td>
-<td>${param.pwd}</td>
-<td>${param.name }</td>
-<td>${param.email}</td>
+<td>${id }</td>
+<td>${pwd}</td>
+<td>${name }</td>
+<td>${email}</td>
 </tr>
 </table>
 </body>

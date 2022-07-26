@@ -250,3 +250,11 @@
 7월 25, 2022 16:40:51.712 [7268:12788:0725/164051.711:ERROR:device_event_log_impl.cc(214)] [16:40:51.712] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
 7월 25, 2022 16:43:10.170 [4548:1272:0725/164310.169:ERROR:device_event_log_impl.cc(214)] [16:43:10.170] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
 7월 25, 2022 16:43:24.912 [3380:3204:0725/164324.912:ERROR:device_event_log_impl.cc(214)] [16:43:24.911] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+7월 26, 2022 10:05:27.790 NEW SESSION
+7월 26, 2022 10:05:27.790 [6572:1036:0726/100527.789:ERROR:gpu_process_host.cc(975)] GPU process exited unexpectedly: exit_code=1
+7월 26, 2022 10:06:08.919 [6572:1036:0726/100608.919:ERROR:gpu_process_host.cc(975)] GPU process exited unexpectedly: exit_code=1
+
+7월 26, 2022 11:54:53.444 NEW SESSION
+7월 26, 2022 11:54:53.444 [12252:12620:0726/115453.443:ERROR:device_event_log_impl.cc(214)] [11:54:53.444] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+7월 26, 2022 12:51:43.614 [12252:12620:0726/125143.613:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
