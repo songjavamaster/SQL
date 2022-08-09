@@ -1,4 +1,4 @@
-/*package sec03.brd01;
+package sec03.brd02;
 
 import java.util.List;
 
@@ -15,5 +15,8 @@ public class BoardService
 		List<ArticleVO> articlesList = boardDAO.selectAllArticles();
 		return articlesList;
 	}
+	public void addArticle(ArticleVO article) {
+		boardDAO.insertNewArticle(article);
+		
+	}
 }
-*/

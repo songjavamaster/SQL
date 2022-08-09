@@ -1,4 +1,4 @@
-/*package sec03.brd01;
+package sec03.brd02;
 
 import java.sql.Date;
 
@@ -101,4 +101,3 @@ public class ArticleVO {
 		this.writeDate = writeDate;
 	}
 }
-*/

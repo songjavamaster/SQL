@@ -1,4 +1,4 @@
-<!--<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
     isELIgnored="false"
     %>
@@ -67,9 +67,8 @@
          </c:when>
       </c:choose>
    </table>
-   <a href="${contextPath}/board/listArticles.do">
-   <p><span>글 쓰기</span></span></p>
+   <a class="cls1" href="${ contextPath }/board/articleForm.do">
+   <p class="cls2">글쓰기</p>
    </a>
 </body>
 </html>
--->

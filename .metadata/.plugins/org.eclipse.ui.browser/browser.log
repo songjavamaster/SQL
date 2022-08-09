@@ -295,3 +295,14 @@
 
 8월 08, 2022 14:58:33.992 NEW SESSION
 8월 08, 2022 14:58:33.992 [9228:9620:0808/145833.991:ERROR:device_event_log_impl.cc(214)] [14:58:33.992] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+8월 09, 2022 10:17:04.103 NEW SESSION
+8월 09, 2022 10:17:04.103 [1056:10136:0809/101704.102:ERROR:device_event_log_impl.cc(214)] [10:17:04.103] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 09, 2022 10:36:17.554 [1056:10136:0809/103617.554:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 09, 2022 10:43:29.811 [1056:10136:0809/104329.810:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 09, 2022 10:54:17.58 [1056:10136:0809/105417.058:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 09, 2022 10:55:14.173 [1056:10136:0809/105514.173:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 09, 2022 11:08:03.622 [1056:10136:0809/110803.622:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 09, 2022 11:58:45.531 [6088:6216:0809/115845.531:ERROR:device_event_log_impl.cc(214)] [11:58:45.531] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 09, 2022 11:59:54.751 [6964:7352:0809/115954.751:ERROR:device_event_log_impl.cc(214)] [11:59:54.752] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 09, 2022 17:37:50.143 [6668:8080:0809/173750.143:ERROR:device_event_log_impl.cc(214)] [17:37:50.143] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.

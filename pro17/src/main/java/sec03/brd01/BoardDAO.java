@@ -1,4 +1,4 @@
-package sec03.brd01;
+/*package sec03.brd01;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -34,11 +34,10 @@ public class BoardDAO
 		try
 		{
 			conn = dataFactory.getConnection();
-			String query = "SELECT LEVEL, articleNOm parentNO,titlem content, id, writeDate"
-					+ "from t_board"
-					+ "START WITH parentNO=0"
-					+ "CONNECT BY PRIOR articleNO=parentNO"
-					+ "ORDER SIBLINGS BY articleNO DESC";
+			String query = "SELECT function_hierarchical4() AS articleNO, @LEVEL AS LEVEL,\r\n"
+					+ " title, content, id, writeDate\r\n"
+					+ " FROM (SELECT @start_with:=0, @articleNO:=@start_with, @LEVEL:=0) tbl\r\n"
+					+ " JOIN t_board;";
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
 			ResultSet rs = pstmt.executeQuery();
@@ -46,7 +45,7 @@ public class BoardDAO
 			{
 				int level = rs.getInt("level");
 				int articleNO = rs.getInt("articleNO");
-				int parentNO = rs.getInt("parentNO");
+//				int parentNO = rs.getInt("parentNO");
 				String title = rs.getString("title");
 				String content = rs.getString("content");
 				String id = rs.getString("id");
@@ -54,7 +53,7 @@ public class BoardDAO
 				ArticleVO article = new ArticleVO();
 				article.setLevel(level);
 				article.setArticleNO(articleNO);
-				article.setParentNO(parentNO);
+//				article.setParentNO(parentNO);
 				article.setTitle(title);
 				article.setContent(content);
 				article.setId(id);
@@ -71,3 +70,4 @@ public class BoardDAO
 		return articlesList;
 	}
 }
+*/
