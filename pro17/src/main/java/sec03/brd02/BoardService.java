@@ -1,4 +1,4 @@
-package sec03.brd02;
+/*package sec03.brd02;
 
 import java.util.List;
 
@@ -20,3 +20,4 @@ public class BoardService
 		
 	}
 }
+*/

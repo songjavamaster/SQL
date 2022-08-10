@@ -1,5 +1,8 @@
-/*package sec03.brd02;
+package sec03.brd03;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.sql.Date;
 
 public class ArticleVO {
@@ -13,10 +16,11 @@ public class ArticleVO {
 	private Date writeDate;
 	
 	public ArticleVO() {
+	}
 
-}
-	public ArticleVO(int level, int articleNO, int parentNO, String title, String content,
-			String imageFileName, String id) {
+	public ArticleVO(int level, int articleNO, int parentNO, String title, String content, String imageFileName,
+			String id) {
+		super();
 		this.level = level;
 		this.articleNO = articleNO;
 		this.parentNO = parentNO;
@@ -26,17 +30,6 @@ public class ArticleVO {
 		this.id = id;
 	}
 
-	public ArticleVO(int articleNO, int parentNO, String title, String content, String imageFileName, String id,
-			Date writeDate) {
-		
-		this.articleNO = articleNO;
-		this.parentNO = parentNO;
-		this.title = title;
-		this.content = content;
-		this.imageFileName = imageFileName;
-		this.id = id;
-		this.writeDate = writeDate;
-	}
 	public int getLevel() {
 		return level;
 	}
@@ -78,11 +71,25 @@ public class ArticleVO {
 	}
 
 	public String getImageFileName() {
+		try {
+			if (imageFileName != null && imageFileName.length() !=0) {
+				imageFileName = URLDecoder.decode(imageFileName,"utf-8");
+			}
+		}catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		return imageFileName;
 	}
 
 	public void setImageFileName(String imageFileName) {
-		this.imageFileName = imageFileName;
+		try {
+			if(imageFileName!=null && imageFileName.length()!=0) {
+				this.imageFileName = URLEncoder.encode(imageFileName,"utf-8");
+			}
+		}catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+	
 	}
 
 	public String getId() {
@@ -100,5 +107,7 @@ public class ArticleVO {
 	public void setWriteDate(Date writeDate) {
 		this.writeDate = writeDate;
 	}
+		
+	
+
 }
-*/

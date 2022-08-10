@@ -1,4 +1,4 @@
-package sec03.brd02;
+/*package sec03.brd02;
 
 import java.io.File;
 import java.io.FileReader;
@@ -29,6 +29,7 @@ public class BoardController extends HttpServlet {
    private static String ARTICLE_IMAGE_REPO = "c:\\board\\article_image";
    BoardService boardService;
    ArticleVO articleVO;
+   
    public void init() throws ServletException {
       boardService = new BoardService();
       articleVO = new ArticleVO();
@@ -122,4 +123,4 @@ public class BoardController extends HttpServlet {
       }
       return articleMap;
    }
-}
+}*/

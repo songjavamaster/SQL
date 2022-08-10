@@ -6,7 +6,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 <%request.setCharacterEncoding("utf-8"); %>
-<!DOCTYPE html>
+<%--<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -71,4 +71,4 @@
    <p class="cls2">글쓰기</p>
    </a>
 </body>
-</html>
+</html> --%>

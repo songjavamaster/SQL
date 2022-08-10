@@ -1,4 +1,4 @@
-package sec03.brd02;
+/*package sec03.brd02;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -26,7 +26,7 @@ public class BoardDAO {
 		}
 	}
 
-	public List selectAllArticles() {
+	public List<ArticleVO> selectAllArticles() {
 		List articlesList = new ArrayList();
 		try {
 			conn = dataFactory.getConnection();
@@ -70,7 +70,7 @@ public class BoardDAO {
 			String query = "SELECT max(articleNO) from t_board";
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
-			ResultSet rs = pstmt.executeQuery(query);
+			ResultSet rs = pstmt.executeQuery();
 			if (rs.next())
 				return (rs.getInt(1) + 1);
 			rs.close();
@@ -108,3 +108,4 @@ public class BoardDAO {
 		}
 	}
 }
+*/
