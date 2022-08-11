@@ -68,7 +68,7 @@ public class BoardDAO {
 			String query = "SELECT max(articleNO) from t_board";
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
-			ResultSet rs = pstmt.executeQuery(query);
+			ResultSet rs = pstmt.executeQuery();
 			if (rs.next())
 				return (rs.getInt(1) + 1);
 			rs.close();
@@ -90,7 +90,7 @@ public class BoardDAO {
 			String id = article.getId();
 			String imageFileName = article.getImageFileName();
 			String query = "INSERT INTO t_board (articleNO, parentNO, title, content,imageFileName, id)"
-					+ " VALUES (?, ? ,?, ?, ?, ?)";
+					+ " VALUES (?, ?, ?, ?, ?, ?)";
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, articleNO);
@@ -112,9 +112,7 @@ public class BoardDAO {
 		ArticleVO article = new ArticleVO();
 		try {
 			conn = dataFactory.getConnection();
-			String query = "select articleNO,parentNO,title,content, NVL(imageFileName, 'null') as imageFileName, id, writeDate"					
-			+ "from t_board" 
-			+ "where articleNO=?";
+			String query = "select articleNO,parentNO,title,content, NVL(imageFileName, 'null') as imageFileName, id, writeDate from t_board where articleNO=?";
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, articleNO);

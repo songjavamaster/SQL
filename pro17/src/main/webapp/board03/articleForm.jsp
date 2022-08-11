@@ -11,7 +11,7 @@ request.setCharacterEncoding("utf-8");
 <head>
 <meta charset="UTF-8">
 <title>글쓰기창</title>
-<script src="http://code.jquery.com/jquery-;atest.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 	function readURL(input) {
 		if (input.files && input.files[0]) {
@@ -22,7 +22,7 @@ request.setCharacterEncoding("utf-8");
 			reader.readAsDataURL(input.files[0]);
 		}
 	}
-	function backTolist(obj) {
+	function backToList(obj) {
 		obj.action = "${contextPath}/board/listArticles.do";
 		obj.submit();
 	}

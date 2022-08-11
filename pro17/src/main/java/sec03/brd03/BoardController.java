@@ -65,7 +65,7 @@ public class BoardController extends HttpServlet {
 				nextPage = "/board03/listArticles.jsp";
 			} else if (action.equals("/articleForm.do")) {
 				nextPage = "/board03/articleForm.jsp";
-			} else if (action.equals("/addAticle.do")) {
+			} else if (action.equals("/addArticle.do")) {
 				int articleNO = 0;
 
 				Map<String, String> articleMap = upload(request, response);
@@ -88,7 +88,7 @@ public class BoardController extends HttpServlet {
 				PrintWriter pw = response.getWriter();
 				pw.print("<script>" + " alert('새글을 추가했습니다.');" + " location.href='" 
 						+ request.getContextPath()
-						+ "/board/listArticles.do';" + "</script>");
+						+ "/board/listArticles.do'" + "</script>");
 				return;
 			} else if (action.equals("/viewArticle.do")) {
 				String articleNO = request.getParameter("articleNO");
