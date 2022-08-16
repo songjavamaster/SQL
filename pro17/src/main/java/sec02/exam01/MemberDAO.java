@@ -1,4 +1,4 @@
-package sec02.exam01;
+/*package sec02.exam01;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -79,6 +79,6 @@ public void addMember(MemberVO m)
 		e.printStackTrace();
 	}
 }
-}
+}*/
 
 

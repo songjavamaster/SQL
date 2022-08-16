@@ -1,4 +1,4 @@
-package sec02.exam02;
+/*package sec02.exam02;
 
 import java.sql.Date;
 
@@ -82,4 +82,4 @@ public class MemberVO {
 		this.joinDate = joinDate;
 	}
 	
-}
+}*/

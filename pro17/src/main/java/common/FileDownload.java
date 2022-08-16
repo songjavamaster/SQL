@@ -15,22 +15,22 @@ import javax.servlet.http.HttpServletResponse;
 public class FileDownload extends HttpServlet {
 
    public void init() {
-      // TODO Auto-generated method stub
+     
    }
 
    public void destroy() {
-      // TODO Auto-generated method stub
+    
    }
 
    protected void doGet(HttpServletRequest request, HttpServletResponse response)
          throws ServletException, IOException {
-      // TODO Auto-generated method stub
+     
       doHandle(request, response);
    }
 
    protected void doPost(HttpServletRequest request, HttpServletResponse response)
          throws ServletException, IOException {
-      // TODO Auto-generated method stub
+     
       doHandle(request, response);
    }
 

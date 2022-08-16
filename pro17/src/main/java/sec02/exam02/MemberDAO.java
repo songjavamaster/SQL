@@ -1,4 +1,4 @@
-package sec02.exam02;
+/*package sec02.exam02;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -130,4 +130,4 @@ public class MemberDAO {
 		
 	}
 
-}
+}*/

@@ -319,3 +319,19 @@
 
 8월 11, 2022 14:27:12.49 NEW SESSION
 8월 11, 2022 14:27:12.49 [7692:7468:0811/142712.048:ERROR:device_event_log_impl.cc(214)] [14:27:12.049] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+8월 13, 2022 10:16:06.919 NEW SESSION
+8월 13, 2022 10:16:06.919 [10748:2272:0813/101606.918:ERROR:device_event_log_impl.cc(214)] [10:16:06.917] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 13, 2022 10:19:42.491 [752:8168:0813/101942.491:ERROR:device_event_log_impl.cc(214)] [10:19:42.491] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 13, 2022 10:21:00.810 [3432:3416:0813/102100.810:ERROR:device_event_log_impl.cc(214)] [10:21:00.810] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 13, 2022 10:21:35.662 [5844:1404:0813/102135.662:ERROR:device_event_log_impl.cc(214)] [10:21:35.662] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 13, 2022 10:21:42.145 [6688:3028:0813/102142.145:ERROR:device_event_log_impl.cc(214)] [10:21:42.145] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 13, 2022 10:23:11.766 [2364:11860:0813/102311.766:ERROR:gpu_process_host.cc(965)] GPU process exited unexpectedly: exit_code=1
+
+8월 16, 2022 11:04:23.192 NEW SESSION
+8월 16, 2022 11:04:23.192 [2492:9820:0816/110423.191:ERROR:device_event_log_impl.cc(214)] [11:04:23.192] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+8월 16, 2022 13:04:23.300 NEW SESSION
+8월 16, 2022 13:04:23.300 [6188:12284:0816/130423.299:ERROR:device_event_log_impl.cc(214)] [13:04:23.299] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 16, 2022 13:06:43.759 [3496:3364:0816/130643.759:ERROR:device_event_log_impl.cc(214)] [13:06:43.759] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 16, 2022 16:36:12.241 [8680:1240:0816/163612.241:ERROR:device_event_log_impl.cc(214)] [16:36:12.241] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.

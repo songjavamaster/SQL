@@ -1,4 +1,4 @@
-package sec02.exam02;
+/*package sec02.exam02;
 
 import java.io.IOException;
 import java.util.List;
@@ -87,4 +87,4 @@ public class MemberController extends HttpServlet {
 	}
 	
 } 
-
+*/
