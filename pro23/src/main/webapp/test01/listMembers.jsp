@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<!--<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"
 	import="java.util.*,com.spring.exam01.*" 
 	isELIgnored="false"%>
@@ -56,4 +56,4 @@ request.setCharacterEncoding("UTF-8");
 		<p class="cls2">회원가입하기</p>
 	</a>
 </body>
-</html>
+</html>-->
