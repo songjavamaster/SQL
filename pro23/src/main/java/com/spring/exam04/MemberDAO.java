@@ -93,6 +93,7 @@ public class MemberDAO {
 		sqlMapper=getInstance();
 		SqlSession session=sqlMapper.openSession();
 		int result =session.insert("mapper.member.foreachInsert", memList);
+		session.commit();
 		return result;
 	}
 	public List<MemberVO> selectLike(String name){

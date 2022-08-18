@@ -116,7 +116,7 @@ public class MemberServlet1 extends HttpServlet {
 			
 		}else if(action.equals("foreachSelect")) {
 			List<String> nameList = new ArrayList<String>();
-			nameList.add("홍길동");
+			nameList.add("송지섭");
 			nameList.add("차범근");
 			nameList.add("이순신");
 			List<MemberVO> membersList = dao.foreachSelect(nameList);
