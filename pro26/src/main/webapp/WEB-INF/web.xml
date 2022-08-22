@@ -12,7 +12,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-<!-- 
+ 
 	
 	<listener>
   		<listener-class>
@@ -25,8 +25,9 @@
   		/WEB-INF/config/action-mybatis.xml 
   		</param-value>
   	</context-param>
- -->  	
-  	<filter>
+   
+	
+   	<filter>
   		<filter-name>encodingFilter</filter-name>
   		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
   		<init-param>
@@ -38,7 +39,7 @@
   		<filter-name>encodingFilter</filter-name>
   		<url-pattern>/*</url-pattern>
   	</filter-mapping>
-
+ 
  
   <servlet>
   	<servlet-name>action</servlet-name>
