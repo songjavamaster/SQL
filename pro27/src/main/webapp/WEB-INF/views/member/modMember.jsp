@@ -16,7 +16,7 @@ text-align:center;
 </style>
 </head>
 <body>
-<form method="post" action="${contextPath }/mem4.do?action=updateMember">
+<form method="post" action="${contextPath }/member/updateMember.do" method="get">
 <h1 class="text_center">수정 한번 혀봐~</h1>
 <table align="center">
 <tr>

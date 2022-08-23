@@ -1,4 +1,4 @@
-package member.dao;
+package com.myspring.pro27.member.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
-import member.VO.MemberVO;
+import com.myspring.pro27.member.VO.MemberVO;
 
 
 @Repository("memberDAO")
@@ -32,5 +32,10 @@ public class MemberDAOImpl implements MemberDAO {
 		return result;
 	}
 	
+	@Override
+	public MemberVO loginById(MemberVO memberVO)throws DataAccessException{
+		MemberVO vo = sqlSession.selectOne("mapper.member.loginById", memberVO);
+		return vo;
+	}
  
 }

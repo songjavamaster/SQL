@@ -15,7 +15,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	</bean>
 
 	<bean id="dataSource"
-		class="org.apache.ibatis.datasource.pooled. PooledDataSource">
+		class="org.apache.ibatis.datasource.pooled.PooledDataSource">
 		<property name="driver" value="${jdbc.driverClassName}" />
 		<property name="url" value="${jdbc.url}" />
 		<property name="username" value="${jdbc.username}" />
@@ -26,8 +26,8 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation"
-			value="classpath: mybatis/model/modelConfig.xml" />
-		<property name="mapper Locations"
+			value="classpath:mybatis/model/modelConfig.xml" />
+		<property name="mapperLocations"
 			value="classpath:mybatis/mappers/*.xml" />
 	</bean>
 
@@ -36,7 +36,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		<constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
 	</bean>
 
-	<bean id="memberDAO" class="com.spring.member.dao.MemberDaoImpl">
+<!-- 	<bean id="memberDAO" class="com.spring.member.dao.MemberDaoImpl">
 		<property name="sqlSession" ref="sqlSession"></property>
-	</bean>
+	</bean> -->
 </beans>		        		

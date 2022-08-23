@@ -25,7 +25,7 @@
 <td>${member.name }</td>
 <td>${member.email }</td>
 <td>${member.joinDate }</td>
-<td><a href="${contextPath }/mem4.do?action=deleteMember&id=${member.id}">삭제하기</a></td>
+<td><a href="${contextPath }/member/removeMember.do?id=${member.id}">삭제하기</a></td>
 </tr>
 </c:forEach>
 </table>

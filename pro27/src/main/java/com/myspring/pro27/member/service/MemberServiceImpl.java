@@ -1,4 +1,4 @@
-package member.service;
+package com.myspring.pro27.member.service;
 
 import java.util.List;
 
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import member.VO.MemberVO;
-import member.dao.MemberDAO;
+import com.myspring.pro27.member.VO.MemberVO;
+import com.myspring.pro27.member.dao.MemberDAO;
 
 
 @Service("/memberService")
@@ -33,5 +33,10 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public int removeMember(String id) throws DataAccessException {
 		return memberDAO.deleteMember(id);
+	}
+
+	@Override
+	public MemberVO login(MemberVO memberVO) throws DataAccessException {
+		return memberDAO.loginById(memberVO);
 	}
 }
