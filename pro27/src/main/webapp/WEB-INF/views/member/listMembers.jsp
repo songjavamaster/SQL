@@ -10,7 +10,7 @@
 </head>
 <body>
 <table border=1 align="center" width="100%">
-<tr align="center" bgcolor="lightblue">
+<tr align="center" bgcolor="lightskyblue">
 <td><b>아이디</b></td>
 <td><b>비밀번호</b></td>
 <td><b>이름</b></td>
