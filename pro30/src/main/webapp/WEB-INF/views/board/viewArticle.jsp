@@ -70,35 +70,35 @@ request.setCharacterEncoding("UTF-8");
 </script>
 </head>
 <body>
-	<form name="frmArticle" method="post" action="${contextPath }"
+	<form name="frmArticle" method="post" action="${contextPath}"
 		enctype="multipart/form-data">
 		<table border=0 align="center">
 			<tr>
 				<td width=150 align="center" bgcolor=lightblue>글번호</td>
-				<td><input type="text" value="${article.articleNO }" disabled />
+				<td><input type="text" value="${article.articleNO}" disabled />
 					<input type="hidden" name="articleNO" value="${article.articleNO}" />
 				</td>
 			</tr>
 			<tr>
 				<td width="150" align="center" bgcolor="lightblue">작성자 아이디</td>
-				<td><input type=text value="${article.id }" name="writer"disabled />
+				<td><input type=text value="${article.id}" name="writer"disabled />
 				</td>
 			</tr>
 			<tr>
 				<td width="150" align="center" bgcolor="lightblue">제목</td>
-				<td><input type=text value="${article.title }" name="title"
+				<td><input type=text value="${article.title}" name="title"
 					id="i_title" disabled /></td>
 			</tr>
 			<tr>
 				<td width="150" align="center" bgcolor="lightblue">내용</td>
-				<td><textarea rows="20" cols="60" name="content" id="i_content" disabled > ${article.content }</textarea></td>
+				<td><textarea rows="20" cols="60" name="content" id="i_content" disabled > ${article.content}</textarea></td>
 			</tr>
-			<c:if
+			 <c:if
 				test="${not empty article.imageFileName && article.imageFileName!='null'}">
 				<tr>
 					<td width="150" align="center" bgcolor="ADD8E6" rowspan="2">이미지</td>
 					<td><input type="hidden" name="originalFileName"
-						value="${article.imageFileName }" /> 
+						value="${article.imageFileName}" /> 
 						<img src="${contextPath}/download.do?articleNO=${article.articleNO}&imageFileName=${article.imageFileName}" id="preview" /><br></td>
 				</tr>
 				<tr>
@@ -109,7 +109,7 @@ request.setCharacterEncoding("UTF-8");
 			<tr>
 				<td width="150" align="center" bgcolor="lightblue">등록일자</td>
 				<td><input type=text
-					value="<fmt:formatDate value="${article.writeDate }" />" disabled />
+					value="<fmt:formatDate value="${article.writeDate}" />" disabled />
 				</td>
 			</tr>
 			<tr id="tr_btn_modify">
@@ -119,9 +119,9 @@ request.setCharacterEncoding("UTF-8");
 					type=button value="취소" onClick="backToList(frmArticle)"></td>
 			</tr>
 			<tr id="tr_btn">
-				<td colspan="2" align="center"><input type=button value="수정하기"
-					onClick="fn_enable(this.form)"> <input type=button
-					value="삭제하기" onClick="fn_remove_article('${contextPath}/board/removeArticle.do',${article.articleNO})">
+				<td colspan="2" align="center">
+				<input type=button value="수정하기"onClick="fn_enable(this.form)">
+				 <input type=button value="삭제하기" onClick="fn_remove_article('${contextPath}/board/removeArticle.do',${article.articleNO})">
 					<input type=button value="리스트로 돌아가기" onClick="backToList(this.form)">
  					<input type=button value="답글쓰기" onClick="fn_reply_form('${contextPath}/board/replyForm.do', ${article.articleNO})">
 				</td>

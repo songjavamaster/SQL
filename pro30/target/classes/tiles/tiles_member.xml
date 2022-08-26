@@ -35,13 +35,13 @@
 			value="/WEB-INF/views/member/loginForm.jsp" />
 	</definition>
 
-<!--  	<definition name="/member/memberForm" extends="baseLayout">
+  	<definition name="/member/memberForm" extends="baseLayout">
 		<put-attribute name="title" value="회원등록창" />
 		<put-attribute name="body"
-			value="/WEB-INF/views/member/member Form.jsp" />
+			value="/WEB-INF/views/member/memberForm.jsp" />
 	</definition>
 
-	<definition name="/member/viewDetail" extends="base Layout">
+<!--	<definition name="/member/viewDetail" extends="base Layout">
 		<put-attribute name="title" value="회원상세창" />
 		<put-attribute name="body"
 			value="/WEB-INF/views/member/viewDetail.jsp" />

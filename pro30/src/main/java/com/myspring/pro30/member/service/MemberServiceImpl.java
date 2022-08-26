@@ -12,7 +12,7 @@ import com.myspring.pro30.member.VO.MemberVO;
 import com.myspring.pro30.member.dao.MemberDAO;
 
 
-@Service("/memberService")
+@Service("memberService")
 @Transactional(propagation = Propagation.REQUIRED)
 public class MemberServiceImpl implements MemberService {
 	@Autowired

@@ -374,3 +374,22 @@
 8월 25, 2022 14:23:05.482 [9620:8636:0825/142305.482:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
 8월 25, 2022 17:19:04.420 [9620:8636:0825/171904.419:ERROR:interface_endpoint_client.cc(665)] Message 0 rejected by interface blink.mojom.WidgetHost
 8월 25, 2022 18:37:39.140 [9620:8636:0825/183739.140:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+8월 26, 2022 12:05:32.427 NEW SESSION
+8월 26, 2022 12:05:32.428 [8444:7004:0826/120532.427:ERROR:device_event_log_impl.cc(214)] [12:05:32.426] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+8월 26, 2022 14:54:12.553 NEW SESSION
+8월 26, 2022 14:54:12.553 [9908:1668:0826/145412.552:ERROR:device_event_log_impl.cc(214)] [14:54:12.553] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 26, 2022 16:28:48.817 [9908:1668:0826/162848.817:ERROR:interface_endpoint_client.cc(665)] Message 1 rejected by interface blink.mojom.WidgetHost
+8월 26, 2022 17:38:26.677 [10228:12552:0826/173826.677:ERROR:device_event_log_impl.cc(214)] [17:38:26.677] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+8월 26, 2022 17:46:03.714 NEW SESSION
+8월 26, 2022 17:46:03.714 [3796:4720:0826/174603.713:ERROR:device_event_log_impl.cc(214)] [17:46:03.713] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+8월 26, 2022 18:53:17.721 NEW SESSION
+8월 26, 2022 18:53:17.722 [4944:8868:0826/185317.720:ERROR:device_event_log_impl.cc(214)] [18:53:17.720] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 26, 2022 18:58:12.723 [4944:8868:0826/185812.723:ERROR:command_buffer_proxy_impl.cc(325)] GPU state invalid after WaitForGetOffsetInRange.
+8월 26, 2022 18:58:12.775 [4944:8868:0826/185812.775:ERROR:gpu_process_host.cc(965)] GPU process exited unexpectedly: exit_code=34
+8월 26, 2022 18:58:12.905 [4944:8868:0826/185812.905:ERROR:network_service_instance_impl.cc(461)] Network service crashed, restarting service.
+8월 26, 2022 19:10:45.117 [3952:2980:0826/191045.117:ERROR:device_event_log_impl.cc(214)] [19:10:45.116] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+8월 26, 2022 20:08:52.269 [5868:8480:0826/200852.269:ERROR:device_event_log_impl.cc(214)] [20:08:52.269] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.

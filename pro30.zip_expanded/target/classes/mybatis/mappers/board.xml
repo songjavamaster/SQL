@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.board">
+	<resultMap id="articleResult" type="articleVO">
+		<result property="level" column="level" />
+		<result property="articleNO" column="articleNO" />
+		<result property="parentNO" column="parentNO" />
+		<result property="title" column="title" />
+		<result property="content" column="content" />
+		<result property="writeDate" column="writeDate" />
+		<result property="imageFileName" column="imageFileName" />
+		<result property="id" column="id" />
+	</resultMap>
+
+	<!-- <select id="selectAllArticlesList" resultMap="articleResult">
+      <![CDATA[
+         select * from t_board
+      ]]>
+	</select> -->
+	<select id="selectAllArticlesList" resultMap="articleResult">
+      <![CDATA[
+         SELECT tb.articleNo, tb.parentNo, fnc.level, tb.title, tb.content, tb.imageFileName, tb.writeDate, tb.id FROM (SELECT function_hierarchical()
+         AS articleNO, parentNO, @level AS LEVEL, title, content, imageFileName,writeDate, id FROM
+          (SELECT @start_with:=0, @articleNO:=@start_with, @level:=0) tbl JOIN t_board) fnc
+         left outer join t_board tb ON tb.articleNo = fnc.articleNo
+      ]]>
+	</select>
+	
+	<insert id="insertNewArticle" parameterType="java.util.Map">
+		<![CDATA[
+			insert into t_board(articleNO, title, content, imageFileName, id)
+			values(#{articleNO},#{title},#{content},#{imageFileName},#{id})
+		]]>
+	</insert>
+	
+	<select id="selectNewArticleNO" resultType="int">
+		<![CDATA[
+			SELECT max(articleNO)+1 from t_board
+		]]>
+	</select>
+	<select id="selectArticle" resultMap="articleResult" parameterType="int">
+		<![CDATA[
+			select * from t_board
+			where articleNO = #{articleNO}
+		]]>
+	</select>
+	
+	<update id="updateArticle" parameterType="java.util.Map">
+		<![CDATA[
+			update t_board
+			set title=#{title},
+			content=#{content}
+			<if test="imageFileName!='' and imageFileName!=null">
+			, imageFileName=#{imageFileName}
+			</if>
+			where articleNO = #{articleNO}
+		]]>
+	</update>
+	
+	<delete id="deleteArticle" parameterType="int">
+		<![CDATA[
+			delete from t_board
+			where articleNO in (
+			select t.articleNO FROM t_board t
+				left outer join t_board t1 on t.parentNO = t1.articleNO
+				left outer join t_board t2 on t1.parentNO = t2.articleNO
+				left outer join t_board t3 on t2.parentNO = t3.articleNO
+				left outer join t_board t4 on t3.parentNO = t4.articleNO
+			)
+		]]>
+	</delete>
+	
+	
+</mapper>
+			        		

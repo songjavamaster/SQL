@@ -10,6 +10,7 @@ request.setCharacterEncoding("UTF-8");
 <meta charset="UTF-8">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
+
 	function backToList(obj) {
 		obj.action = "${contextPath}/board/listArticles.do";
 		obj.submit();
@@ -28,9 +29,7 @@ request.setCharacterEncoding("UTF-8");
 </head>
 <body>
 	<h1 style="text-align: center">답글쓰기</h1>
-	<form name="frmReply" method="post"
-		action="${contextPath}/board/addReply.do"
-		enctype="multipart/form-data">
+	<form name="frmReply" method="post" action="${contextPath}/board/addReply.do" enctype="multipart/form-data">
 		<table align="center">
 			<tr>
 				<td align="right">글쓴이:&nbsp;</td>
@@ -53,9 +52,8 @@ request.setCharacterEncoding("UTF-8");
 			</tr>
 			<tr>
 				<td align="right"></td>
-				<td><input type=submit value="답글반영하기" /> <input type=button
-					value="취소
-" onClick="backToList(this.form)" /></td>
+				<td><input type=submit value="답글반영하기" />
+				<input type=button value="취소" onClick="backToList(this.form)" /></td>
 			</tr>
 		</table>
 	</form>

@@ -3,6 +3,6 @@
 <configuration>
    <typeAliases>
       <typeAlias type="com.myspring.pro30.member.VO.MemberVO" alias="memberVO" />
-      <typeAlias type="com.myspring.pro30.board.VO.articleVO" alias="articleVO" />
+      <typeAlias type="com.myspring.pro30.board.VO.ArticleVO" alias="articleVO" />
    </typeAliases>
 </configuration>    

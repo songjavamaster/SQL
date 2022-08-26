@@ -5,7 +5,7 @@
 
 <tiles-definitions>
 	<!-- main layout -->
-	<definition name="baseLayout"
+	<!-- <definition name="baseLayout"
 		template="/WEB-INF/views/common/layout.jsp">
 		<put-attribute name="title" value="" />
 		<put-attribute name="header"
@@ -33,12 +33,24 @@
 		<put-attribute name="title" value="로그인창" />
 		<put-attribute name="body"
 			value="/WEB-INF/views/member/loginForm.jsp" />
-	</definition>
+	</definition> -->
 
 	<definition name="/board/listArticles" extends="baseLayout">
 		<put-attribute name="title" value="글목록창" />
 		<put-attribute name="body"
 			value="/WEB-INF/views/board/listArticles.jsp" />
+	</definition>
+	
+	<definition name="/board/articleForm" extends="baseLayout">
+		<put-attribute name="title" value="글쓰기창" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/board/articleForm.jsp" />
+	</definition>
+	
+	<definition name="/board/viewArticle" extends="baseLayout">
+		<put-attribute name="title" value="글상세창" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/board/viewArticle.jsp" />
 	</definition>
 
 	<!-- <definition name="/member/memberForm" extends="baseLayout"> <put-attribute 

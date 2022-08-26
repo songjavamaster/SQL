@@ -72,11 +72,14 @@ public class MemberControllerImpl implements MemberController {
  //  @RequestMapping(value = "/member/*Form.do", method = RequestMethod.GET)
    public ModelAndView form(HttpServletRequest request, HttpServletResponse response) throws Exception {
       String viewName = getViewName(request);
+      System.out.println("viewName : " + viewName);
       ModelAndView mav = new ModelAndView();
       mav.setViewName(viewName);
       return mav;
       
    }
+   
+   
    
   
 @Override
