@@ -432,3 +432,19 @@
 9월 19, 2022 10:00:26.536 [6764:4948:0919/100026.536:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
 9월 19, 2022 10:00:26.537 [6764:4948:0919/100026.536:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
 9월 19, 2022 10:06:45.444 [2308:3824:0919/100645.444:ERROR:device_event_log_impl.cc(214)] [10:06:45.444] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+9월 19, 2022 20:08:36.339 NEW SESSION
+9월 19, 2022 20:08:36.339 [1000:4572:0919/200836.338:ERROR:device_event_log_impl.cc(214)] [20:08:36.338] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+9월 20, 2022 09:40:29.961 NEW SESSION
+9월 20, 2022 09:40:29.961 [2952:920:0920/094029.961:ERROR:device_event_log_impl.cc(214)] [09:40:29.961] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+9월 20, 2022 09:45:44.630 [2952:920:0920/094544.629:ERROR:CONSOLE(1)] "Uncaught (in promise) URIError: URI malformed", source: devtools://devtools/bundled/devtools-frontend/front_end/models/workspace/workspace.js (1)
+9월 20, 2022 10:16:02.532 [2952:920:0920/101602.531:ERROR:device_event_log_impl.cc(214)] [10:16:02.532] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+9월 20, 2022 12:35:04.222 [2952:920:0920/123504.221:ERROR:interface_endpoint_client.cc(689)] Message 0 rejected by interface blink.mojom.WidgetHost
+9월 20, 2022 12:38:41.807 [2952:920:0920/123841.807:ERROR:interface_endpoint_client.cc(689)] Message 0 rejected by interface blink.mojom.WidgetHost
+9월 20, 2022 12:39:22.710 [2952:920:0920/123922.709:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 20, 2022 12:39:31.509 [2952:920:0920/123931.509:ERROR:CONSOLE(1)] "Uncaught (in promise) URIError: URI malformed", source: devtools://devtools/bundled/devtools-frontend/front_end/models/workspace/workspace.js (1)
+9월 20, 2022 12:43:19.269 [2952:920:0920/124319.268:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 20, 2022 12:45:28.567 [2952:920:0920/124528.567:ERROR:interface_endpoint_client.cc(689)] Message 0 rejected by interface blink.mojom.WidgetHost
+9월 20, 2022 19:03:07.299 [2952:920:0920/190307.299:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
+9월 20, 2022 19:03:07.299 [2952:920:0920/190307.299:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
