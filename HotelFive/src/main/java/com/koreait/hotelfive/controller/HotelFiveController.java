@@ -39,6 +39,10 @@ public class HotelFiveController {
 	public String gofindReservationNumber() {
 		return "reservation/findReservationNumber";
 	}
+	@RequestMapping("/hehe")
+	public String goMainPage3() {
+		return "test";
+	}
 	
 
 }

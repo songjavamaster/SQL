@@ -448,3 +448,14 @@
 9월 20, 2022 12:45:28.567 [2952:920:0920/124528.567:ERROR:interface_endpoint_client.cc(689)] Message 0 rejected by interface blink.mojom.WidgetHost
 9월 20, 2022 19:03:07.299 [2952:920:0920/190307.299:ERROR:CONSOLE(1)] "console.assert", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
 9월 20, 2022 19:03:07.299 [2952:920:0920/190307.299:ERROR:CONSOLE(0)] "TypeError: Cannot read properties of null (reading 'resourceURL')", source:  (0)
+
+9월 21, 2022 09:49:16.302 NEW SESSION
+9월 21, 2022 09:49:16.302 [10600:8752:0921/094916.301:ERROR:device_event_log_impl.cc(214)] [09:49:16.301] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+9월 21, 2022 13:14:23.619 [10600:8752:0921/131423.618:ERROR:interface_endpoint_client.cc(689)] Message 0 rejected by interface blink.mojom.WidgetHost
+9월 21, 2022 16:45:55.691 [10600:8752:0921/164555.690:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 21, 2022 18:26:55.334 [10600:8752:0921/182655.334:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+9월 21, 2022 18:57:46.221 [2656:924:0921/185746.220:ERROR:device_event_log_impl.cc(214)] [18:57:46.221] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+9월 22, 2022 09:35:23.939 NEW SESSION
+9월 22, 2022 09:35:23.939 [9748:8384:0922/093523.938:ERROR:device_event_log_impl.cc(214)] [09:35:23.939] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+9월 22, 2022 16:55:14.61 [7260:4920:0922/165514.061:ERROR:device_event_log_impl.cc(214)] [16:55:14.060] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
