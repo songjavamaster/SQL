@@ -3,24 +3,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script
   src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <style>
-
 .post-slider {
 	width: 70%;
 	margin: 0px auto;
 	position : relative;
 }
-
 .silder-title {
 	text-align: center;
 	margin: 30px auto;
 }
-
 .next {
 	position: absolute;
 	top: 50%;
@@ -28,8 +24,9 @@
 	font-size: 2em;
 	color: gray;
 	cursor: pointer;
+	border: 1px solid red;
+	background-image: url("https://ifh.cc/g/HHOrB3.jpg");
 }
-
 .prev {
 	position: absolute;
 	top: 50%;
@@ -37,8 +34,8 @@
 	font-size: 2em;
 	color: gray;
 	cursor: pointer;
+	border: 1px solid red;
 }
-
 .post-wrapper {
 	width: 84%;
 	height: 350px;
@@ -46,7 +43,6 @@
 	overflow: hidden;
 	padding: 10px 0px 10px 0px;
 }
-
 .post {
 	width: 300px;
 	height: 300px;
@@ -55,21 +51,17 @@
 	background: white;
 	border-radius: 5px;
 }
-
 .post-info {
 	font-size: 15px;
 	height: 30%;
 	padding-left: 10px;
 }
-
 .slider-image {
-	width: 80%;
+	width: 100%;
 	height: 175px;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
-
-
 </style>
 
 <meta charset="UTF-8">
@@ -81,9 +73,8 @@
 		<!--page slider -->
 		<div class="post-slider">
 			<h1 class="silder-title">Trending Posts</h1>
-			
-			<i class="fas fa-chevron-left prev"></i>
-			<i class="fas fa-chevron-right next"></i>
+			<i class="fas fa-chevron-left prev"></i> //왼쪽 방향 버튼 <i
+				class="fas fa-chevron-right next"></i> //오른쪽 방향 버튼
 			<div class="post-wrapper">
 				<div class="post">
 					<img src="https://ifh.cc/g/HHOrB3.jpg" class="slider-image">
@@ -128,15 +119,11 @@
 		<!--post slider-->
 	</div>
 	<script>
-
 	$('.post-wrapper').slick({
-		  slidesToShow: 3,
-		  slidesToScroll: 1,
-		  autoplay: true,
-		  autoplaySpeed: 2000,
-		  nextArrow:$('.next'),
-		  prevArrow:$('.prev'),
-		});
+	  infinite: true,
+	  slidesToShow: 3,
+	  slidesToScroll: 3
+	});
 </script>
 </body>
 </html>
