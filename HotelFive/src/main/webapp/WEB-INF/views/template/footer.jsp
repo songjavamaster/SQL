@@ -1,6 +1,93 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-		</div>
+		
+		<style>
+		.footer {
+	height: 200px;
+	width: 100%;
+	padding: 30px 0 30px 0;
+	font-size: 13px;
+	color: white;
+	background-color: rgb(30, 30, 30);
+	bottom: 0;
+}
+
+.footer .footer_menu {
+	margin-bottom: 20px;
+}
+
+.footer ul {
+	overflow: hidden;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.footer ul li {
+	display: inline;
+	margin: 0;
+	height: 10px;
+}
+
+.footer ul.footer_menu li {
+	padding-right: 15px;
+}
+
+.footer ul.company_info li {
+	padding-right: 5px;
+}
+
+.footer ul.footer_menu li:after {
+	content: '';
+	width: 1px;
+	height: 10px;
+	background: #2e2e2e;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.footer ul.company_info li:after {
+	content: '';
+	width: 1px;
+	height: 10px;
+	background: #2e2e2e;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.footer ul li:last-child:after {
+	display: none;
+}
+
+.footer p {
+	text-align: center;
+	margin-top: 10px;
+}
+
+.footer-img {
+	width: 30px;
+}
+
+.footer-wrap .footer-content {
+	color: rgb(170, 170, 170);
+	column-count: 2;
+	column-gap: 40px;
+	font-weight: 300;
+	width: 900px;
+	margin: auto;
+	padding: 50px 0 0 0;
+}
+
+.footer-bottom {
+	bottom: 0;
+	height: 20px;
+	width: 100%;
+	text-align: center;
+	color: rgb(220, 220, 220);
+	background-color: rgb(60, 60, 60);
+}
+</style>
 		<div class="footer">
                <ul class="footer_menu">
                    <li>이용약관</li>
@@ -23,6 +110,6 @@
                </ul>
                <p>Copyright © 2022 RamadaSokcho inc. All rights reserved.</p>
            </div>
-	  </div>
+
 </body>
 </html>
