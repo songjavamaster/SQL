@@ -43,6 +43,9 @@ public class HotelFiveController {
 	public String goMainPage3() {
 		return "test";
 	}
-	
+	@RequestMapping("/hehe1")
+	public String goMainPage4() {
+		return "index3";
+	}
 
 }

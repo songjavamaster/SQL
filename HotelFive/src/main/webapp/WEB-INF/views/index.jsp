@@ -8,7 +8,6 @@
 		background-image: url(resources/main.jpg);
 		height: 800px;	
 	} */
-
 /*#myVideo {
      position: fixed;
      right: 0;
@@ -713,16 +712,6 @@ for (let i = 0; i < maxSlide; i++) {
 	</div>
 	<!-- -------------------------------배너 슬라이더------------------------------- -->
 
-    <div class="slide slide_wrap">
-      <div class="slide_item">1</div>
-      <div class="slide_item">2</div>
-      <div class="slide_item">3</div>
-      <div class="slide_item">4</div>
-      <div class="slide_item">5</div>
-      <div class="slide_prev_button slide_button">◀</div>
-      <div class="slide_next_button slide_button">▶</div>
-      <ul class="slide_pagination"></ul>
-    </div>
 
 	<!-- -------------------------------첫번째 컨테이너 박스------------------------------- -->
 	<div class="container">
