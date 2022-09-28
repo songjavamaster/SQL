@@ -3,7 +3,7 @@
 		
 		<style>
 		.footer {
-	height: 200px;
+	height: 90px;
 	width: 100%;
 	padding: 30px 0 30px 0;
 	font-size: 13px;
