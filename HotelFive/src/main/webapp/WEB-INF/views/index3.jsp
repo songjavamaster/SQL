@@ -14,6 +14,7 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
 .ALLALL{
 font-family: 'Secular One', sans-serif;
 background-color: #fdfbf4;
@@ -29,7 +30,6 @@ background-color: #fdfbf4;
 	text-align: center;
 	width: 100%;
 	margin-top: 0px;
-	position: fixed;
 	z-index: 10;
 }
 
@@ -37,9 +37,9 @@ background-color: #fdfbf4;
 	color: white;
 	text-shadow: 2px 2px 2px gray;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 25px;
 	font-weight: bold;
-	margin: 0 40px 40px 0;
+	margin: 0 -320px 40px 0;
 }
 
 .center-tab>a:hover {
@@ -304,9 +304,9 @@ background-color: #fdfbf4;
 /* ------------------------체크인 박스-------------------------*/
 .reservation-box {
 	/* margin: 300px 400px; */
-	border: 1px solid black;
+	border: 1px solid #ff5e62;
 	padding: 5px;
-	background: black;
+	background: #ff5e62;
 	margin-top: 20px;
 	margin-left: 500px;
 	width: 50%;
@@ -363,9 +363,9 @@ background-color: #fdfbf4;
 #reservation-box-selectBtn {
 	border: none;
 	margin: auto;
-	width: 100%;
+	width: 101%;
 	height: 100%;
-	background: black;
+	background: #ff5e62;
 	color: white;
 }
 /* ------------------------체크인 박스 끝!!!!-------------------------*/
@@ -842,7 +842,7 @@ a.btn:hover {
 	<div class="page-wrapper" style="position: relative;">
 		<!--page slider -->
 		<div class="post-slider">
-			<h2 class="silder-title">Trending Posts</h2>
+			<h2 class="silder-title">★Hot Issue Hotel★</h2>
 			<i class="fas fa-chevron-left prev"></i> <i
 				class="fas fa-chevron-right next"></i>
 			<div class="post-wrapper">

@@ -14,8 +14,8 @@ public class RoomViewCommand implements Command {
 	
 	// 객실 상세정보 Command
 	
-	@Override
-	public void execute(SqlSession sqlSession, Model model) {
+	@Override //덮어씌우는 
+	public void execute(SqlSession sqlSession, Model model) { //execute 매개변수로 전달받은 SQL구문을 수행하는 메소드
 		
 		Map<String, Object> map = model.asMap();
 		HttpServletRequest request = (HttpServletRequest) map.get("request");
