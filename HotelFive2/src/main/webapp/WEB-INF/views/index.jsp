@@ -1,69 +1,76 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<link rel="shortcut icon" type="image/x-icon" href="resources/together.ico" />
+
 <link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 <link rel="stylesheet" type="text/css"
-	href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+   href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-	integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-	crossorigin="anonymous"></script>
+   integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+   crossorigin="anonymous"></script>
 <script type="text/javascript"
-	src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <%
 request.setCharacterEncoding("utf-8");
 String title = request.getParameter("title");
 if (title == null || title.isEmpty()) {
-	title = "Welcome to the KoreaHotel";
+   title = "Welcome to the KoreaHotel";
 }
 pageContext.setAttribute("title", title);
 %>
 <link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 <link rel="stylesheet"
-	href="https://fonts.googleapis.com/css?family=Inconsolata">
+   href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script
-	src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+   src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <style>
 @import
-	url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap')
-	;
+   url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap')
+   ;
 
 .ALLALL {
-	font-family: 'Secular One', sans-serif;
-	background-color: #fdfbf4;
-	width: 2000px;
+   font-family: 'Secular One', sans-serif;
+  /*  background-color: #fdfbf4; */
+     background-color:#fdf7f4;
+   width: 1900px;
 }
 
 .main {
-	display: flex;
-	margin: 0px;
-	padding: 0px;
-	width: 2000px;
+   display: flex;
+   margin: 0px;
+   padding: 0px;
+   width: 1900px;
+}
+html {
+   overflow-x: auto;
+   width: 1900px;
 }
 /*----------------------------메인 Board , login%out !!!!!!!!!-----------------------------------------*/
 .header-wrap {
-	position: absolute;
-	top: 0;
-	text-align: center;
-	width: 1000px;
-	margin-top: 0px;
-	z-index: 10;
+   position: absolute;
+   top: 0;
+   text-align: center;
+   width: 1000px;
+   margin-top: 0px;
+   z-index: 10;
 }
 
 .center-tab>a:hover {
-	color: black;
+   color: black;
 }
 
 #loginout {
-	flex: 1;
+   flex: 1;
 }
 
 #loginout:hover {
-	color: #ff5e62;
+   color: #ff5e62;
 }
 
 /* .footer-wrap {
@@ -74,542 +81,585 @@ pageContext.setAttribute("title", title);
         bottom: 0;
    } */
 .footer {
-	height: 200px;
-	width: 100%;
-	padding: 30px 0 30px 0;
-	font-size: 13px;
-	color: white;
-	background-color: rgb(30, 30, 30);
-	bottom: 0;
+   height: 200px;
+   width: 100%;
+   padding: 30px 0 30px 0;
+   font-size: 13px;
+   color: white;
+   background-color: rgb(30, 30, 30);
+   bottom: 0;
 }
 
 .footer .footer_menu {
-	margin-bottom: 20px;
+   margin-bottom: 20px;
 }
 
 .footer ul {
-	overflow: hidden;
-	margin: 0 auto;
-	width: 100%;
-	text-align: center;
-	margin-top: 10px;
+   overflow: hidden;
+   margin: 0 auto;
+   width: 100%;
+   text-align: center;
+   margin-top: 10px;
 }
 
 .footer ul li {
-	display: inline;
-	margin: 0;
-	height: 10px;
+   display: inline;
+   margin: 0;
+   height: 10px;
 }
 
 .footer ul.footer_menu li {
-	padding-right: 15px;
+   padding-right: 15px;
 }
 
 .footer ul.company_info li {
-	padding-right: 5px;
+   padding-right: 5px;
 }
 
 .footer ul.footer_menu li:after {
-	content: '';
-	width: 1px;
-	height: 10px;
-	background: #2e2e2e;
-	display: inline-block;
-	margin-left: 20px;
+   content: '';
+   width: 1px;
+   height: 10px;
+   background: #2e2e2e;
+   display: inline-block;
+   margin-left: 20px;
 }
 
 .footer ul.company_info li:after {
-	content: '';
-	width: 1px;
-	height: 10px;
-	background: #2e2e2e;
-	display: inline-block;
-	margin-left: 10px;
+   content: '';
+   width: 1px;
+   height: 10px;
+   background: #2e2e2e;
+   display: inline-block;
+   margin-left: 10px;
 }
 
 .footer ul li:last-child:after {
-	display: none;
+   display: none;
 }
 
 .footer p {
-	text-align: center;
-	margin-top: 10px;
+   text-align: center;
+   margin-top: 10px;
 }
 
 .footer-img {
-	width: 30px;
+   width: 30px;
 }
 
 .footer-wrap .footer-content {
-	color: rgb(170, 170, 170);
-	column-count: 2;
-	column-gap: 40px;
-	font-weight: 300;
-	width: 900px;
-	margin: auto;
-	padding: 50px 0 0 0;
+   color: rgb(170, 170, 170);
+   column-count: 2;
+   column-gap: 40px;
+   font-weight: 300;
+   width: 900px;
+   margin: auto;
+   padding: 50px 0 0 0;
 }
 
 .footer-bottom {
-	bottom: 0;
-	height: 20px;
-	width: 100%;
-	text-align: center;
-	color: rgb(220, 220, 220);
-	background-color: rgb(60, 60, 60);
+   bottom: 0;
+   height: 20px;
+   width: 100%;
+   text-align: center;
+   color: rgb(220, 220, 220);
+   background-color: rgb(60, 60, 60);
 }
 
 .dropdown {
-	position: relative;
-	display: flex;
-	flex: 1;
-	align-items: center;
-	justify-content: center;
+   position: relative;
+   display: flex;
+   flex: 1;
+   align-items: center;
+   justify-content: center;
 }
 
 .dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: rgba(0, 0, 0, 0.6);
-	width: 150px;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	padding: 12px 16px;
+   display: none;
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.6);
+   width: 150px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   padding: 12px 16px;
 }
 
 .dropdown-content a {
-	color: white;
-	margin: 0 20px 40px 20px;
-	text-shadow: 0px 0px 0px;
-	font-weight: lighter;
+   color: white;
+   margin: 0 20px 40px 20px;
+   text-shadow: 0px 0px 0px;
+   font-weight: lighter;
 }
 
 .dropdown:hover .dropdown-content {
-	display: block;
+   display: block;
 }
 
 .dropdown-content a:hover {
-	text-decoration: underline;
+   text-decoration: underline;
 }
 
 .dropdown:hover .dropdown-content {
-	display: block;
-	display:
+   display: block;
+   display:
 }
 
 .dropdown:hover .dropbtn {
-	background-color: rgb(190, 190, 190);
+   background-color: rgb(190, 190, 190);
 }
 
 .test_1 {
-	width: 100%;
-	height: 100%;
-	display: none;
-	z-index: 200;
-	position: fixed;
+   width: 100%;
+   height: 100%;
+   display: none;
+   z-index: 200;
+   position: fixed;
 }
 
 .test_1.open {
-	display: block;
+   display: block;
 }
 
 .test_1.open:before {
-	content: '';
-	width: 100%;
-	height: 100%;
-	z-index: 25;
-	position: fixed;
-	background: black;
-	opacity: 0.4;
-	top: 0;
+   content: '';
+   width: 100%;
+   height: 100%;
+   z-index: 25;
+   position: fixed;
+   background: black;
+   opacity: 0.4;
+   top: 0;
 }
 
 .test_1 .test_2 {
-	position: fixed;
-	margin: auto;
-	top: 50%;
-	z-index: 30;
-	background: white;
-	left: 50%;
-	width: 450px;
-	padding: 20px 45px 50px;
-	height: 570px;
-	margin-top: -268px;
-	margin-left: -255px;
+   position: fixed;
+   margin: auto;
+   top: 50%;
+   z-index: 30;
+   background: white;
+   left: 50%;
+   width: 450px;
+   padding: 20px 45px 50px;
+   height: 570px;
+   margin-top: -268px;
+   margin-left: -255px;
 }
 
 .login-box h1 {
-	text-align: center;
+   text-align: center;
 }
 
 .login-text {
-	width: 360px;
-	height: 47px;
-	padding-left: 20px;
-	border: 1px solid #d9d9d9;
-	margin: 0 0 10px;
-	font-size: 14px;
+   width: 360px;
+   height: 47px;
+   padding-left: 20px;
+   border: 1px solid #d9d9d9;
+   margin: 0 0 10px;
+   font-size: 14px;
 }
 
 .find {
-	float: right;
+   float: right;
 }
 
 #loginButton {
-	border: none;
-	width: 360px;
-	padding: 10px 0;
-	background: black;
-	color: white;
-	margin: 10px 0;
+   border: none;
+   width: 360px;
+   padding: 10px 0;
+   background: black;
+   color: white;
+   margin: 10px 0;
 }
 
 #loginButton:hover {
-	outline: none;
-	background: #5A5A5A;
+   outline: none;
+   background: #5A5A5A;
 }
 
 #mypage:hover {
-	color: #ff5e62;
+   color: #ff5e62;
 }
 
 #registerButton {
-	border: none;
-	width: 360px;
-	padding: 10px 0;
-	background: #E3EAF3;
-	margin: 0 0 10px
+   border: none;
+   width: 360px;
+   padding: 10px 0;
+   background: #E3EAF3;
+   margin: 0 0 10px
 }
 
 #registerButton:hover {
-	outline: none;
-	background: #A4CAED;
+   outline: none;
+   background: #A4CAED;
 }
 /*    a {text-decoration: none; font-size: 0.9em; color: black;} */
 .pop-up-close {
-	border: none;
-	position: absolute;
-	top: -20.5px;
-	right: -20px;
-	width: 40px;
-	height: 41px;
-	text-indent: -9999px;
-	background-color: transparent;
-	background-image: url(resources/x-button.png);
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: center;
+   border: none;
+   position: absolute;
+   top: -20.5px;
+   right: -20px;
+   width: 40px;
+   height: 41px;
+   text-indent: -9999px;
+   background-color: transparent;
+   background-image: url(resources/x-button.png);
+   background-repeat: no-repeat;
+   background-size: 100%;
+   background-position: center;
 }
 
 /*----------------------------메인 Board , login%out !!!!!!!!!-----------------------------------------*/
 
 /* ------------------------체크인 박스-------------------------*/
 .reservation-box {
-	/* margin: 300px 400px; */
-	border: 1px solid #ff5e62;
-	padding: 5px;
-	background: #ff5e62;
-	margin-top: 20px;
-	margin-left: 500px;
-	width: 50%;
-	flex: 3;
+   /* margin: 300px 400px; */
+   border: 1px solid #ff5e62;
+   padding: 5px;
+   background: #ff5e62;
+   margin-top: 20px;
+   margin-left: 500px;
+   width: 50%;
+   flex: 3;
 }
 
 .reservation-box #logo {
-	width: 200px;
+   width: 200px;
 }
 
 .dropdown a:hover {
-	color: black;
+   color: black;
 }
 
 .dropdown  a {
-	color: white;
-	text-shadow: 2px 2px 2px gray;
-	text-decoration: none;
-	font-size: 25px;
-	font-weight: bold;
+   color: white;
+   text-shadow: 2px 2px 2px gray;
+   text-decoration: none;
+   font-size: 25px;
+   font-weight: bold;
 }
 
 .reservation-box-form {
-	background: white;
-	width: 100%;
-	margin: 0;
-	display: flex;
+   background: white;
+   width: 100%;
+   margin: 0;
+   display: flex;
 }
 
 .footer-wrap {
-	position: fixed;
-	bottom: 0;
+   position: fixed;
+   bottom: 0;
 }
 
 .login1 {
-	position: relative;
-	display: flex;
-	flex: 1;
-	align-items: center;
-	justify-content: center;
-	color: white;
-	text-shadow: 2px 2px 2px gray;
-	text-decoration: none;
-	font-size: 25px;
-	font-weight: bold;
+   position: relative;
+   display: flex;
+   flex: 1;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   text-shadow: 2px 2px 2px gray;
+   text-decoration: none;
+   font-size: 25px;
+   font-weight: bold;
 }
 
 #reservation-box-checkIn-div {
-	width: 40%;
+   width: 40%;
 }
 
 #reservation-box-checkOut-div {
-	width: 40%;
+   width: 40%;
 }
 
 #reservation-box-selectBtn-div {
-	width: 20%;
-	text-align: center;
+   width: 20%;
+   text-align: center;
 }
 
 #reservation-box-checkIn {
-	width: 100%;
-	border: none;
-	text-align: center;
-	font-size: 16px;
+   width: 100%;
+   border: none;
+   text-align: center;
+   font-size: 16px;
 }
 
 #reservation-box-checkOut {
-	width: 100%;
-	border: none;
-	text-align: center;
-	font-size: 16px;
+   width: 100%;
+   border: none;
+   text-align: center;
+   font-size: 16px;
 }
 
 #reservation-box-checkIn:focus {
-	outline: none;
+   outline: none;
 }
 
 #reservation-box-checkOut:focus {
-	outline: none;
+   outline: none;
 }
 
 #reservation-box-selectBtn {
-	border: none;
-	margin: auto;
-	width: 101%;
-	height: 100%;
-	background: #ff5e62;
-	color: white;
+   border: none;
+   margin: auto;
+   width: 101%;
+   height: 100%;
+   background: #ff5e62;
+   color: white;
 }
 /* ------------------------체크인 박스 끝!!!!-------------------------*/
 
 /* ------------------------중간 슬라이더!!!!-------------------------*/
 .sliderAll {
-	margin-top: 10px;
-	display: flex;
+   margin-top: 10px;
+   display: flex;
 }
 
 .aaa {
-	height: 220px;
-	width: 0px;
-	flex: 1;
-	background-color: #ff5e62;
+   height: 220px;
+   width: 0px;
+   flex: 1;
+   background-color: rgb(252,232,232);
 }
 
 section#cat2 {
-	float: left;
-	width: 520px;
-	flex: 2;
+   float: left;
+   width: 520px;
+   flex: 2;
 
 }
 
 .bbb {
-	height: 220px;
-	width: 100px;
-	flex: 1;
-	background-color: #ff5e62;
+   height: 220px;
+   width: 100px;
+   flex: 1;
+   background-color: rgb(252,232,232);
 }
 
 /* ------------------------중간 슬라이더 끝!!!!-------------------------*/
 
 /* ------------------------슬라이더 3개 !!!!!!!!-------------------------*/
 .post-slider {
-	width: 70%;
-	margin: 0px auto;
-	position: relative;
+   width: 70%;
+   margin: 0px auto;
+   position: relative;
 }
 
 .silder-title {
-	color: #ff5e62;
-	width: 1000px;
+   color: #ff5e62;
 }
 
 .next {
-	position: absolute;
-	top: 80%;
-	right: 10px;
-	font-size: 2em;
-	color: gray;
-	cursor: pointer;
+   position: absolute;
+   top: 80%;
+   right: 10px;
+   font-size: 2em;
+   color: gray;
+   cursor: pointer;
 }
 
 .prev {
-	position: absolute;
-	top: 80%;
-	left: 70px;
-	font-size: 2em;
-	color: gray;
-	cursor: pointer;
+   position: absolute;
+   top: 80%;
+   left: 70px;
+   font-size: 2em;
+   color: gray;
+   cursor: pointer;
 }
 
 .post-wrapper {
-	width: 84%;
-	height: 350px;
-	margin: 0px auto;
-	overflow: hidden;
-	padding: 10px 0px 10px 80px;
+   width: 84%;
+   height: 350px;
+   margin: 0px auto;
+   overflow: hidden;
+   padding: 10px 0px 10px 80px;
 }
 
 .post {
-	width: 300px;
-	height: 300px;
-	margin: 0px 10px;
-	display: inline-block;
-	background: white;
-	border-radius: 5px;
+   width: 300px;
+   height: 300px;
+   margin: 0px 10px;
+   display: inline-block;
+   background: white;
+   border-radius: 5px;
 }
 
 .post-info {
-	font-size: 15px;
-	height: 30%;
-	padding-left: 10px;
+   font-size: 15px;
+   height: 30%;
+   padding-left: 10px;
+}
+#more,.silder-title{
+   display:inline-block;
+
+}
+#more{
+   float:right;
+   text-decoration: none;
+   margin-top:35px;
 }
 /* ------------------------슬라이더 3개  끝!!!!!!!!-------------------------*/
 
 /* ------------------------슬라이더 3개 !!!!!!!!-------------------------*/
+
 .post-slider1 {
-	width: 70%;
-	margin: 0px auto;
-	position: relative;
+   width: 70%;
+   margin: 0px auto;
+   position: relative;
 }
 
 .next1 {
-	position: absolute;
-	top: 70%;
-	right: 10px;
-	font-size: 2em;
-	color: gray;
-	cursor: pointer;
+   position: absolute;
+   top: 70%;
+   right: 10px;
+   font-size: 2em;
+   color: gray;
+   cursor: pointer;
 }
 
 .prev1 {
-	position: absolute;
-	top: 70%;
-	left: 70px;
-	font-size: 2em;
-	color: gray;
-	cursor: pointer;
+   position: absolute;
+   top: 70%;
+   left: 70px;
+   font-size: 2em;
+   color: gray;
+   cursor: pointer;
 }
 
 .post-wrapper1 {
-	width: 84%;
-	height: 350px;
-	margin: 0px auto;
-	overflow: hidden;
-	padding: 10px 0px 10px 80px;
+   width: 84%;
+   height: 350px;
+   margin: 0px auto;
+   overflow: hidden;
+   padding: 20px 0px 10px 180px;
+
 }
 
 .post1 {
-	width: 300px;
-	height: 300px;
-	margin: 0px 10px;
-	display: inline-block;
-	background: white;
-	border-radius: 5px;
+   width: 300px;
+   height: 300px;
+   margin: 0px 10px;
+   display: inline-block;
+   background: white;
+   border-radius: 5px;
 }
 
 .post-info1 {
-	font-size: 15px;
-	height: 30%;
-	padding-left: 10px;
+   font-size: 15px;
+   height: 30%;
+   padding-left: 10px;
 }
 
 .slider-image {
-	width: 100%;
-	height: 175px;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+   width: 100%;
+   height: 175px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+.bubble
+{
+position: relative;
+width: 285px;
+height: 120px;
+padding: 0px;
+background: #FFFFFF;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+padding:20px;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 18px 11px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -18px;
+left: 62px;
+}
+
+.fa-user{
+   width:15px;
+   margin-right: 10px;
 }
 /* ------------------------슬라이더 3개 끝 !!!!!!!!-------------------------*/
 a.btn {
-	list-style-type: none;
-	display: block;
-	background: #FFEFBA;
-	color: ff5e62;
-	position: relative;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	text-align: center;
-	padding: 5px;
-	transition: 250ms;
-	text-decoration: none;
-	font-weight: bold;
+   list-style-type: none;
+   display: block;
+   background: #FFEFBA;
+   color: ff5e62;
+   position: relative;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   text-align: center;
+   padding: 5px;
+   transition: 250ms;
+   text-decoration: none;
+   font-weight: bold;
 }
 
 a.btn:hover {
-	background: #fffbd5;
-	transition: 100ms;
+   background: #fffbd5;
+   transition: 100ms;
 }
 
 .one {
-	width: 100px;
-	height: 100px;
-	margin: 0 auto;
+   width: 100px;
+   height: 100px;
+   margin: 0 auto;
 }
 
 #logo {
-	width: 100px;
-	height: 100px;
+   width: 100px;
+   height: 100px;
 }
 /*----------------------------사이드 퀵바-----------------------------------------*/
 .fixed {
-	position: fixed;
-	bottom: 200px;
-	right: 50px;
-	z-index: 10;
+   position: fixed;
+   bottom: 200px;
+   right: 50px;
+   z-index: 10;
 }
 
 .chat-content {
-	background-color: transparent;
-	padding: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: 3px 5px 10px #999999;
-	box-shadow: 3px 5px 10px #999999;
-	-webkit-animation: chat 1s infinite;
-	animation: chat 1s infinite;
-	cursor: pointer;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	text-align: center;
+   background-color: transparent;
+   padding: 10px;
+   border-radius: 10px;
+   -webkit-box-shadow: 3px 5px 10px #999999;
+   box-shadow: 3px 5px 10px #999999;
+   -webkit-animation: chat 1s infinite;
+   animation: chat 1s infinite;
+   cursor: pointer;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   text-align: center;
 }
 
 .chat-content .chat__call {
-	margin-bottom: 20px;
+   margin-bottom: 20px;
 }
 
 .chat-content .chat__call .callIcon, .chat-content, .chat__aboutUs,
-	.chat__roomInfo, .chat__reservation {
-	color: black;
-	font-size: 20px;
-	text-decoration: none;
+   .chat__roomInfo, .chat__reservation {
+   color: black;
+   font-size: 20px;
+   text-decoration: none;
 }
 
 .ssss {
-	margin: 0px;
-	padding: 0px;
+   margin: 0px;
+   padding: 0px;
 }
+
+
 /*----------------------------사이드 퀵바 끝!!!!!!!!!-----------------------------------------*/
 </style>
 <!-- 송지섭 -->
@@ -689,7 +739,8 @@ a.btn:hover {
 <script>
         //웹 페이지가 시작할때 사용되는 기본값 설정
         $(document).ready(function(){
-            let width = 1200;
+           $("#cat2").css("background-color","rgb(252,232,232)");
+            let width = 900;
             let height = 220;
             let current = 0;
 
@@ -944,176 +995,183 @@ a.btn:hover {
 
 <!-- 동적인 페이지 포함 -->
 <div class="ALLALL">
-	<div class="one">
-		<a href="main"><img id="logo" alt="logo"
-			src="resources/logo/logogo.png" /></a>
-	</div>
-	<!-- 사이드퀵 -->
-	<div class="fixed">
-		<div class="chat-content">
-			<!-- <a class="chat__call">AboutUs</a> -->
-			<!-- <a class="chat__kakao">채팅</a> -->
-			<a href="hotelInfo" class="chat__aboutUs">AboutUs</a> <a
-				href="roomListPage" class="chat__roomInfo">RoomInfo</a> <a
-				href="reservation" class="chat__reservation">Reservation</a>
-		</div>
+   <div class="one">
+      <a href="main"><img id="logo" alt="logo"
+         src="resources/logo/logogo.png" /></a>
+   </div>
+   <!-- 사이드퀵 -->
+   <div class="fixed">
+      <div class="chat-content">
+         <!-- <a class="chat__call">AboutUs</a> -->
+         <!-- <a class="chat__kakao">채팅</a> -->
+         <a href="hotelInfo" class="chat__aboutUs">AboutUs</a>  
+         <a href="reservation" class="chat__reservation">Reservation</a><br/>
+            <div style="cursor:pointer;" onclick="window.scrollTo(0,0);"><img src="resources/top.png" style="width:30px; height:30px;"></div>
+      </div>
 
-	</div>
-	<!-- 사이드퀵 끝-->
-	<!-- -------------------------------------------------체크인 체크아웃---------------------------------------------- -->
-	<div class="main">
-		<div class="reservation-box">
-			<form class="reservation-box-form">
-				<div id="reservation-box-checkIn-div">
-					체크인<br /> <input id="reservation-box-checkIn" type="date"
-						name="rCheckIn" />
-				</div>
-				<div id="reservation-box-checkOut-div">
-					체크아웃<br /> <input id="reservation-box-checkOut" type="date"
-						name="rCheckOut" />
-				</div>
-				<div id="reservation-box-selectBtn-div">
-					<input id="reservation-box-selectBtn" type="button" value="객실검색"
-						onclick="fn_selectReservation(this.form)">
-				</div>
-			</form>
+   </div>
+   <!-- 사이드퀵 끝-->
+   <!-- -------------------------------------------------체크인 체크아웃---------------------------------------------- -->
+   <div class="main">
+      <div class="reservation-box">
+         <form class="reservation-box-form">
+            <div id="reservation-box-checkIn-div">
+               체크인<br /> <input id="reservation-box-checkIn" type="date"
+                  name="rCheckIn" />
+            </div>
+            <div id="reservation-box-checkOut-div">
+               체크아웃<br /> <input id="reservation-box-checkOut" type="date"
+                  name="rCheckOut" />
+            </div>
+            <div id="reservation-box-selectBtn-div">
+               <input id="reservation-box-selectBtn" type="button" value="객실검색"
+                  onclick="fn_selectReservation(this.form)">
+            </div>
+         </form>
 
-		</div>
+      </div>
 
-		<div class="dropdown">
-			<a>Board▼</a>
-			<div class="dropdown-content">
-				<a href="noticeBoardListPage">Notice</a> <a href="qnaBoardList">QNA</a>
-				<a href="ReviewBoardListPage">Review</a>
-			</div>
-		</div>
-		<div class="login1">
-			<c:if test="${loginDTO.mRight eq 1}">
-				<a href="adminMain">Member Management</a>
-			</c:if>
-			<!--  loginDTO.mRight ne 1이면 일반회원임-->
-			<c:if test="${loginDTO ne null and loginDTO.mRight ne 1}">
-				<a href="goMyPage" style="margin-right: 50px; margin-left: -20px;"
-					id="mypage">MyPage</a>
-			</c:if>
-			<c:if test="${loginDTO eq null }">
-				<a id="loginout" href="javascript:void(0);" style="float: right;"
-					onclick="aa()"><i class="fas fa-bone"></i><br />LOGIN</a>
-			</c:if>
-			<c:if test="${loginDTO ne null }">
-				<a id="loginout" href="javascript:void(0);" style="float: right;"
-					onclick="fn_logout()"><i class="fas fa-bone"></i><br />LOGOUT</a>
-			</c:if>
-		</div>
+      <div class="dropdown">
+         <a>Board▼</a>
+         <div class="dropdown-content">
+            <a href="noticeBoardListPage">Notice</a> <a href="qnaBoardList">QNA</a>
+            <a href="ReviewBoardListPage">Review</a>
+         </div>
+      </div>
+      <div class="login1">
+         <c:if test="${loginDTO.mRight eq 1}">
+            <a href="adminMain">Member Management</a>
+         </c:if>
+         <!--  loginDTO.mRight ne 1이면 일반회원임-->
+         <c:if test="${loginDTO ne null and loginDTO.mRight ne 1}">
+            <a href="goMyPage" style="margin-right: 50px; margin-left: -20px;"
+               id="mypage">MyPage</a>
+         </c:if>
+         <c:if test="${loginDTO eq null }">
+            <a id="loginout" href="javascript:void(0);" style="float: right;"
+               onclick="aa()"><i class="fas fa-bone"></i><br />LOGIN</a>
+         </c:if>
+         <c:if test="${loginDTO ne null }">
+            <a id="loginout" href="javascript:void(0);" style="float: right;"
+               onclick="fn_logout()"><i class="fas fa-bone"></i><br />LOGOUT</a>
+         </c:if>
+      </div>
 
-	</div>
-	<!-- 체크인 체크아웃 끝-->
+   </div>
+   <!-- 체크인 체크아웃 끝-->
 
-	<!-- 중간 큰 슬라이더 -->
-	<div class="sliderAll">
-		<div class="aaa">1</div>
-		<div class="ssss" style="position: relative;">
-			<section id="cat2" class="slider">
-				<div class="images">
-					<img class="image" src="resources/assets/hotel_img/event1.png">
-					<img class="image" src="resources/assets/hotel_img/event2.png">
-					<img class="image" src="resources/assets/hotel_img/event3.png">
-				</div>
-			</section>
-		</div>
-		<div class="bbb">2</div>
-	</div>
-	<!-- 중간 큰 슬라이더 끝 -->
-	<!-- -----------------------첫번째 줄 슬라이더------------------------------------ -->
-	<div class="page-wrapper" style="position: relative;">
-		<!--page slider -->
-		<div class="post-slider">
-			<h2 class="silder-title">★Hot Issue Hotel★</h2>
-			<i class="fas fa-chevron-left prev"></i> <i
-				class="fas fa-chevron-right next"></i>
-			<div class="post-wrapper">
-				<c:forEach var="hDTO" items="${list }">
-					<div class="post">
-						<img alt="${hDTO.hName }"
-							src="resources/assets/hotel_img/${hDTO.hThumbnail }.png"
-							class="slider-image">
-						<div class="post-info">
-							<h4 style="margin: 0px;">
-								<a href="#" class="post-subject">${hDTO.hName }</a>
-							</h4>
-							<i class="far fa-user" style="height: 5%;">${hDTO.hAddress} </i>
-						</div>
-						<a href="reservation" class="btn">예약하기</a>
-					</div>
-				</c:forEach>
-			</div>
-		</div>
-	</div>
-	<!-- -----------------------첫번째 줄 슬라이더 끝!!!!------------------------------------ -->
+   <!-- 중간 큰 슬라이더 -->
+   <div class="sliderAll">
+      <div class="aaa"></div>
+      <div class="ssss" style="position: relative;">
+         <section id="cat2" class="slider">
+            <div class="images">
+               <img class="image" src="resources/assets/hotel_img/event1_r.png">
+               <img class="image" src="resources/assets/hotel_img/event2_r.png">
+               <img class="image" src="resources/assets/hotel_img/event3_r.png">
+            </div>
+         </section>
+      </div>
+      <div class="bbb"></div>
+   </div>
+   <!-- 중간 큰 슬라이더 끝 -->
+<!-- -----------------------첫번째 줄 슬라이더------------------------------------ -->
+      <div class="page-wrapper" style="position: relative;">
+         <!--page slider -->
+         <div class="post-slider">
+            <h3 class="silder-title">인기 호텔 모음</h3>
+            <i class="fas fa-chevron-left prev"></i> <i
+               class="fas fa-chevron-right next"></i>
+            <div class="post-wrapper">
+               <c:forEach var="hDTO" items="${list }">
+                  <div class="post">
+                     <img alt="${hDTO.hName }"
+                        src="resources/assets/hotel_img/${hDTO.hThumbnail }.png"
+                        class="slider-image">
+                     <div class="post-info">
+                        <h4 style="margin: 0px;">
+                           <a href="#" class="post-subject">${hDTO.hName }</a>
+                        </h4>
+                        ${hDTO.hAddress}
 
-	<!-- -----------------------두번쨰 줄 슬라이더------------------------------------ -->
-	<div class="page-wrapper1">
-		<!--page slider -->
-		<div class="post-slider1">
-			<h2 class="silder-title">Trending Posts1</h2>
-			<i class="fas fa-chevron-left prev1"></i> <i
-				class="fas fa-chevron-right next1"></i>
-			<div class="post-wrapper1">
-				<c:forEach var="hDTO" items="${list }">
-					<div class="post">
-						<img alt="${hDTO.hName }"
-							src="resources/assets/hotel_img/${hDTO.hThumbnail }.png"
-							class="slider-image">
-						<div class="post-info">
-							<h4 style="margin: 0px;">
-								<a href="#" class="post-subject">${hDTO.hName }</a>
-							</h4>
-							<i class="far fa-user" style="height: 5%;">${hDTO.hAddress} </i>
-						</div>
-						<a href="reservation" class="btn">예약하기</a>
-					</div>
-				</c:forEach>
-			</div>
-		</div>
-	</div>
-	<!-- -----------------------두번쨰 줄 슬라이더 끝!!!!!!------------------------------------ -->
+                     </div>
+                     <a href="reservation" class="btn">예약하기</a>
+                  </div>
+               </c:forEach>
+            </div>
+         </div>
+         <!-- -----------------------첫번째 줄 슬라이더 끝!!!!------------------------------------ -->
 
-	<div class="main-footer">
-		<div class="main-wrap">
+   <!-- -----------------------두번쨰 줄 슬라이더------------------------------------ -->
+    <div class="page-wrapper1" >
+      <!--page slider -->
+      <div class="post-slider1">
+         <h3 class="silder-title" >투개더 예약후기</h3>
+         <a href="http://localhost:8080/hotelfive/ReviewBoardListPage" id="more">리뷰 더보기</a>
+         <i class="fas fa-chevron-left prev1"></i>
+         <i class="fas fa-chevron-right next1"></i>
+         <div class="post-wrapper1">
+             <c:forEach var="rDTO" items="${list2 }">
+            <div class="post22">
+            <div class="bubble">
+            
+            <b>${rDTO.rTitle }</b><br/>
+            <a>${rDTO.rContent }</a>
+                     </div>
+               <div class="post-info">
+                  <h4 style="margin: 0px;">
+                     
+                  </h4>
+                  <br/>
+                  <i class="far fa-user" style="height: 5%;">${rDTO.mId} </i><br/><br/>
+        
+                 <c:forEach var="rating" varStatus="status" begin="1" end="${rDTO.rRating }"><img src="resources/together/star1.png" width="15px;" style="display:inline-block"/></c:forEach>
+                 <c:forEach var="rating" varStatus="status" begin="1" end="${5-rDTO.rRating }"><img src="resources/together/star2.png"width="15px;"style="display:inline-block"/></c:forEach><br/><br/>
+                 <a>${rDTO.gName }</a>
+               </div>
+            </div>
+           </c:forEach>
+      </div> 
+   </div>
+</div>
+   <!-- -----------------------두번쨰 줄 슬라이더 끝!!!!!!------------------------------------ -->
 
-			<div class="test_1">
+   <div class="main-footer">
+      <div class="main-wrap">
 
-				<div class="test_2">
-					<div id="login" class="login-box">
-						<form method="POST">
-							<h1>LOGIN</h1>
-							<br /> <input class="login-text" id="login_mId" type="text"
-								name="login_mId" placeholder="아이디" autofocus /><br /> <input
-								class="login-text" id="login_mPw" type="password"
-								name="login_mPw" placeholder="비밀번호" /><br /> <input
-								id="saveIDCheck" type="checkbox" name="saveIDCheck" value="true"
-								checked />아이디 기억하기 <img id="getchaImg" src=""
-								style="width: 360px; height: 120px;" /> <input id="input_key"
-								type="text" name="input_key" style="margin-top: 5px;" /> <a
-								href="javascript:void(0);" onclick="cc()"> <i
-								class="fas fa-redo-alt">새로고침</i></a> <br /> <input id="loginButton"
-								type="button" value="로그인" onclick="fn_login(this.form)" /> <a
-								class="btn btnkakao" id="kakao-login-btn"
-								style="text-align: center;" href="javascript:loginWithKakao()">카카오
-								1초 로그인/회원가입</a> <input id="registerButton" type="button"
-								value="회원가입" onclick="location.href='registerPage'" />
-							<div class="find">
-								<a href="findIdPage">아이디 찾기</a>&nbsp;|&nbsp; <a
-									href="findPwPage">비밀번호 찾기</a><br />
-							</div>
-							<a href="findReservationNumber">비회원 예약확인</a><br />
-						</form>
-					</div>
-					<button class="pop-up-close" onclick="bbb()"></button>
-				</div>
-			</div>
-		</div>
-	</div>
+         <div class="test_1">
+
+            <div class="test_2">
+               <div id="login" class="login-box">
+                  <form method="POST">
+                     <h1>LOGIN</h1>
+                     <br /> <input class="login-text" id="login_mId" type="text"
+                        name="login_mId" placeholder="아이디" autofocus /><br /> <input
+                        class="login-text" id="login_mPw" type="password"
+                        name="login_mPw" placeholder="비밀번호" /><br /> <input
+                        id="saveIDCheck" type="checkbox" name="saveIDCheck" value="true"
+                        checked />아이디 기억하기 <img id="getchaImg" src=""
+                        style="width: 360px; height: 120px;" /> <input id="input_key"
+                        type="text" name="input_key" style="margin-top: 5px;" /> <a
+                        href="javascript:void(0);" onclick="cc()"> <i
+                        class="fas fa-redo-alt">새로고침</i></a> <br /> <input id="loginButton"
+                        type="button" value="로그인" onclick="fn_login(this.form)" /> <a
+                        class="btn btnkakao" id="kakao-login-btn"
+                        style="text-align: center;" href="javascript:loginWithKakao()">카카오
+                        1초 로그인/회원가입</a> <input id="registerButton" type="button"
+                        value="회원가입" onclick="location.href='registerPage'" />
+                     <div class="find">
+                        <a href="findIdPage">아이디 찾기</a>&nbsp;|&nbsp; <a
+                           href="findPwPage">비밀번호 찾기</a><br />
+                     </div>
+                     <a href="findReservationNumber">비회원 예약확인</a><br />
+                  </form>
+               </div>
+               <button class="pop-up-close" onclick="bbb()"></button>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
 
 <!-- 슬라이더 스크립트 -->
