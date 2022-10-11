@@ -19,7 +19,7 @@
    	<img alt="step3" src="resources/assets/register_img/step3.jpg"><br/><br><br/>
    	<img alt="logo" src="resources/logo/register.jpg">
    	<p>${mName }님의 회원가입이 성공적으로 이루어졌습니다.</p>
-   	<p>고객님의 편안한 휴식을 제공하는 Hotel Five에서 좋은 추억을 쌓아가세요.</p>
+   	<p>고객님의 편안한 휴식을 제공하는 <b>Together</b> 에서 좋은 추억을 쌓아가세요.</p>
    	<input type="button" value="홈으로 가기" onclick="location.href='main'"/>
 </div>
 

@@ -832,9 +832,6 @@ a.btn:hover {
 <script type="text/javascript">
    var filename;
    
-   
-   
-   
    function aa() {
     //캡차 갖고오는 메소드
       //$('.test_1').css("display","block");
@@ -1215,31 +1212,25 @@ a.btn:hover {
 
 					<div class="test_2">
 						<div id="login" class="login-box">
-							<form method="POST">
-								<h1>LOGIN</h1>
-								<br /> <input class="login-text" id="login_mId" type="text"
-									name="login_mId" placeholder="아이디" autofocus /><br /> <input
-									class="login-text" id="login_mPw" type="password"
-									name="login_mPw" placeholder="비밀번호" /><br /> <input
-									id="saveIDCheck" type="checkbox" name="saveIDCheck"
-									value="true" checked />아이디 기억하기 <img id="getchaImg" src=""
-									style="width: 360px; height: 120px;" /> <input id="input_key"
-									type="text" name="input_key" style="margin-top: 5px;" /> <a
-									href="javascript:void(0);" onclick="cc()"> <i
-									class="fas fa-redo-alt">새로고침</i></a> <br /> <input
-									id="loginButton" type="button" value="로그인"
-									onclick="fn_login(this.form)" /> <a class="btn btnkakao"
-									id="kakao-login-btn" style="text-align: center;"
-									href="javascript:loginWithKakao()">카카오 로그인/회원가입</a> <input
-									id="registerButton" type="button" value="회원가입"
-									onclick="location.href='registerPage'" />
-								<div class="find">
-									<a href="findIdPage">아이디 찾기</a>&nbsp;|&nbsp; <a
-										href="findPwPage">비밀번호 찾기</a><br />
-								</div>
-								<a href="findReservationNumber">비회원 예약확인</a><br />
-							</form>
+						<form method="POST">
+							<h1>LOGIN</h1>
+						    <br /> 
+						    <input class="login-text" id="login_mId" type="text" name="login_mId" placeholder="아이디" autofocus /><br />
+						    <input class="login-text" id="login_mPw" type="password" name="login_mPw" placeholder="비밀번호" /><br />
+							<input id="saveIDCheck" type="checkbox" name="saveIDCheck" value="true" checked />아이디 기억하기 
+							<img id="getchaImg" src="" style="width: 360px; height: 120px;" /> 
+							<input id="input_key" type="text" name="input_key" style="margin-top: 5px;" /> <a href="javascript:void(0);" onclick="cc()">
+							<i class="fas fa-redo-alt">새로고침</i></a> <br />
+							<input id="loginButton" type="button" value="로그인" onclick="fn_login(this.form)" />
+							<a class="btn btnkakao" id="kakao-login-btn" style="text-align: center;" href="javascript:loginWithKakao()">카카오 로그인/회원가입</a>
+							<input id="registerButton" type="button" value="회원가입" onclick="location.href='registerPage'" />
+						<div class="find">
+							<a href="findIdPage">아이디 찾기</a>&nbsp;|&nbsp; 
+							<a href="findPwPage">비밀번호 찾기</a><br />
 						</div>
+							<a href="findReservationNumber">비회원 예약확인</a><br />
+						</form>
+					</div>
 						<button class="pop-up-close" onclick="bbb()"></button>
 					</div>
 				</div>

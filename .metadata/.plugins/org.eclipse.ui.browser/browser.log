@@ -522,3 +522,15 @@
 10월 07, 2022 13:08:36.427 [6668:4780:1007/130836.427:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
 10월 07, 2022 16:14:40.966 [6668:4780:1007/161440.966:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
 10월 07, 2022 16:47:39.614 [6668:4780:1007/164739.614:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+
+10월 11, 2022 09:38:02.790 NEW SESSION
+10월 11, 2022 09:38:02.790 [6960:10248:1011/093802.789:ERROR:device_event_log_impl.cc(214)] [09:38:02.789] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+10월 11, 2022 09:49:28.552 [6960:10248:1011/094928.552:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 11, 2022 10:36:29.562 [6960:10248:1011/103629.561:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 11, 2022 10:36:29.563 [6960:10248:1011/103629.561:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 11, 2022 10:43:32.885 [6960:10248:1011/104332.885:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 11, 2022 10:43:32.885 [6960:10248:1011/104332.885:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 11, 2022 10:43:32.885 [6960:10248:1011/104332.885:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 11, 2022 11:58:56.224 [6960:10248:1011/115856.224:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 11, 2022 14:22:53.327 [6960:10248:1011/142253.326:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 11, 2022 15:40:44.310 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
