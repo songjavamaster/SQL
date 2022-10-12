@@ -534,3 +534,13 @@
 10월 11, 2022 11:58:56.224 [6960:10248:1011/115856.224:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
 10월 11, 2022 14:22:53.327 [6960:10248:1011/142253.326:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
 10월 11, 2022 15:40:44.310 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+
+10월 12, 2022 10:09:56.34 NEW SESSION
+10월 12, 2022 10:09:56.34 [9016:10028:1012/100956.034:ERROR:device_event_log_impl.cc(214)] [10:09:56.034] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+10월 12, 2022 10:59:18.382 [9016:10028:1012/105918.381:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 12, 2022 12:58:26.538 [9016:10028:1012/125826.538:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 12, 2022 12:59:56.128 [9016:10028:1012/125956.128:ERROR:interface_endpoint_client.cc(689)] Message 0 rejected by interface blink.mojom.WidgetHost
+10월 12, 2022 13:31:43.524 [9016:10028:1012/133143.524:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 12, 2022 16:33:29.382 [9016:10028:1012/163329.382:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 12, 2022 19:10:02.546 [9016:10028:1012/191002.546:ERROR:device_event_log_impl.cc(214)] [19:10:02.546] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+10월 12, 2022 19:15:14.293 [9016:10028:1012/191514.293:ERROR:interface_endpoint_client.cc(689)] Message 1 rejected by interface blink.mojom.WidgetHost
