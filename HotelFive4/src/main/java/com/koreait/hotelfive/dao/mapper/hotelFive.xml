@@ -445,7 +445,7 @@
 	<!-- 관리자 전체 회원 리스트 -->
 	<select id="userList"
 		resultType="com.koreait.hotelfive.dto.MemberDTO">
-				SELECT *, MNAME FROM member ORDER BY MNO ASC LIMIT 1,5;  
+				SELECT *, MNAME FROM member ORDER BY MNO ASC LIMIT 0,5;  
 		<!-- SELECT A.* FROM QNA AS A WHERE QISDELETE=1 ORDER BY QNO DESC LIMIT 
 			#{beginRecord2},5; -->
 		<!-- A라고 별칭을 정한 QNA테이블에서 모든 값을 선택하겠다. QISDELETE가 1이며 QNO를 내림차순으로 정렬하는 조건으로! -->
@@ -509,19 +509,18 @@
 	</select>
 
 
-	<select id="queryAdminList2" parameterType="Map"
-		resultType="com.koreait.hotelfive.dto.MemberDTO"><!-- 정렬된 테이블을 A라 부르고 ROWNUM을 쓸수 있게 부착, -->
+	 <!-- <select id="queryAdminList2" parameterType="Map"
+		resultType="com.koreait.hotelfive.dto.MemberDTO">정렬된 테이블을 A라 부르고 ROWNUM을 쓸수 있게 부착,
 		SELECT * FROM (SELECT ROWNUM RN, A.* FROM (SELECT * FROM MEMBER
 		<if test="column=='MNAME'">WHERE MNAME LIKE '%' || #{query} || '%'</if>
 		<if test="column=='MID'">WHERE MID LIKE '%' || #{query} || '%'</if>
 		<if test="column=='MADDR1'">WHERE MADDR1 LIKE '%' || #{query} || '%'</if>
-		<if test="column=='CHOOSE'">WHERE MNAME LIKE '%' || #{query} || '%' OR MID LIKE '%' ||
-			#{query} || '%' OR MADDR1 LIKE '%' || #{query} || '%'</if>
+		<if test="column=='CHOOSE'">WHERE MNAME LIKE '%' || #{query} || '%' OR MID LIKE '%' || #{query} || '%' OR MADDR1 LIKE '%' || #{query} || '%'</if>
 		ORDER BY MNO DESC) A) WHERE RN BETWEEN #{beginRecord} AND #{endRecord}
-	</select>
+	</select> -->
 
 	<!-- 검색된 레코드만 보여주기. -->
-	<select id="getQueryRecord2" resultType="int">
+	 <select id="getQueryRecord2" resultType="int">
 		SELECT COUNT(*) FROM MEMBER
 		<if test="column=='MNAME'">WHERE MNAME LIKE '%' || #{query} || '%'</if>
 		<if test="column=='MID'">WHERE MID LIKE '%' || #{query} || '%'</if>
@@ -529,7 +528,7 @@
 		<if test="column=='CHOOSE'">WHERE MNAME LIKE '%' || #{query} || '%' OR MID LIKE '%' ||
 			#{query} || '%' OR MADDR1 LIKE '%' || #{query} || '%'</if>
 	</select>
-
+	
 	<select id="countReservation" resultType="int">
 		SELECT COUNT(*) FROM RESERVATION
 	</select>
