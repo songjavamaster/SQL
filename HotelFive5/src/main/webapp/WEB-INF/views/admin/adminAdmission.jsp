@@ -29,10 +29,19 @@
 <script>
 //등록요청 버튼 클릭시 
 function request(){
-	if(confirm("관리자에게 블랙 리스트 등록을 요청하시겠습니까?")){
+	if(confirm("블랙 리스트 승인을 하시겠습니까?")){
 	/* 	f.action='blacklistrequest'
 		f.submit(); */
-		alert("블랙 리스트 등록요청을 완료했습니다.");
+		alert("블랙 리스트 승인을 완료했습니다.");
+	} else{
+	}	
+}
+
+function request1(){
+	if(confirm("블랙 리스트 요청 거절 하시겠습니까?")){
+	/* 	f.action='blacklistrequest'
+		f.submit(); */
+		alert("블랙 리스트 거절을 완료했습니다.");
 	} else{
 	}	
 }
@@ -59,13 +68,13 @@ function deleteform(){
 	<tr>
 	<th>아이디</th>
 	<th>등록요청 사유</th>
-	<th>등록요청</th>
+	
 	</tr>
 	<tr class="form">
 	<td><input type="text" id="userid"/></td>
 	<td><input type="text" id="reason"/></td>
-	<td><input type="button" id="delete" onclick="request()" value="등록요청"></td>
 	<td><input type="button" id="delete" onclick="request()" value="승인"></td>
+	<td><input type="button" id="delete" onclick="request1()" value="거절"></td>
 	</tr>
 	</table>
 	</div>
