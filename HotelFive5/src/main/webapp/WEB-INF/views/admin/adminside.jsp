@@ -43,7 +43,7 @@ a{
          <li class="icon"><i class="fa-solid fa-users" style="font-size:25px;"></i>회원 관리</li>
          <li><a href="#">회원 목록</a></li>
          <li><a href="#">회원 탈퇴</a></li>
-         <li><a href="#">블랙리스트 승인</a></li>
+         <li><a href="adminAdmission">블랙리스트 승인</a></li>
       </ul>
       
       <ul>

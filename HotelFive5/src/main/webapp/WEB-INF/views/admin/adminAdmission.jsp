@@ -61,9 +61,7 @@ function deleteform(){
 </script>
 <body>
 <div class="allcontent">
-	<div id="title"><h4>블랙 리스트 승인요청</h4></div>
-	<div><input type="button" value="요청양식 추가하기" onclick="newform()" style="margin-left:500px;"/> 
-		<input type="button" value="요청양식 삭제하기" onclick="deleteform()"/>
+	<div id="title"><h4>블랙 리스트 관리</h4></div>
 	<table class="table">	
 	<tr>
 	<th>아이디</th>

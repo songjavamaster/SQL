@@ -309,7 +309,7 @@ public class MemberController {
         return obj.toJSONString();
    }
    
-         // 이병한 
+        
          // 1. 마이페이지 - 메인
          @RequestMapping("goMyPage")
          public String goMyPage() {
