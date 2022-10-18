@@ -1,83 +1,109 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
+    pageEncoding="UTF-8"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!-- 동적인 페이지 포함 -->
-<jsp:include page="/WEB-INF/views/template/sellerheader.jsp" />
+<jsp:include page="/WEB-INF/views/template/header.jsp">
+   <jsp:param value="관리자용" name="title"/>
+</jsp:include>
 <jsp:include page="/WEB-INF/views/admin/adminside.jsp" />
-<title>사업자 블랙리스트 승인관리</title>
-</head>
-<!-- CSS -->
-<style>
-	allcontent{
-		margin:5px auto;
-		padding:5px auto;
-		margin-left: 400px;
-	}
- 	h4{
-		margin-left:100px;
-	}
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
+<style type="text/css">
+   .container {
+      width: 70%;
+      height: 700px;
+      display: fiexd;
+/*       margin-left:100px; */
+   }
+   
+   tr, th {text-align: center;}
+   select {
+     width: 140px;
+     padding: .6em .3em;
+     font-family: inherit;
+     background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     border: 1px solid #999;
+     border-radius: 0px;
+   }
+   select::-ms-expand {
+     /* for IE 11 */
+     display: none;
+   }
+   
+   .Btn{ /* 버튼 : 회원추가, 전체회원 리스트 */
+      
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 24px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+   }
+   .btnAdd, .btnTotalList {
+     background-color: white; 
+     color: black; 
+     border: 2px solid #4CAF50;
+   }
+   .btnAdd:hover, .btnTotalList:hover {
+     background-color: #4CAF50;
+     color: white;
+   }
+    
 </style>
 
-<!-- JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-//등록요청 버튼 클릭시 
-function request(){
-	if(confirm("블랙 리스트 승인을 하시겠습니까?")){
-	/* 	f.action='blacklistrequest'
-		f.submit(); */
-		alert("블랙 리스트 승인을 완료했습니다.");
-	} else{
-	}	
-}
-
-function request1(){
-	if(confirm("블랙 리스트 요청 거절 하시겠습니까?")){
-	/* 	f.action='blacklistrequest'
-		f.submit(); */
-		alert("블랙 리스트 거절을 완료했습니다.");
-	} else{
-	}	
-}
-
-//요청양식 추가
-function newform(){
-		 $('.table').append (                        
-         '<tr class="newform"><td><input type="text" id="userid"/></td><td><input type="text" id="reason"/></td><td><input type="button" id="delete" onclick="request()" value="등록요청"/></td></tr>'
-         );	
-}
-
- //요청양식 삭제
-function deleteform(){
-		 $('.newform').remove();   
-} 
-
-</script>
-<body>
-<div class="allcontent">
-	<div id="title"><h4>블랙 리스트 관리</h4></div>
-	<table class="table">	
-	<tr>
-	<th>아이디</th>
-	<th>등록요청 사유</th>
-	
-	</tr>
-	<tr class="form">
-	<td><input type="text" id="userid"/></td>
-	<td><input type="text" id="reason"/></td>
-	<td><input type="button" id="delete" onclick="request()" value="승인"></td>
-	<td><input type="button" id="delete" onclick="request1()" value="거절"></td>
-	</tr>
-	</table>
-	</div>
+<div class="container">
+   <h3 class="text-center">미승인호텔</h3><br>
+   
+   <div class="text-center">전체 ${totalRecord} 개</div>
+   
+   <br>
+   <table class="table table-hover">
+      <thead>
+         <tr class="text-center">
+            <th>아이디</th>
+            <th>블랙리스트 사유</th>
+            <th>승인</th>
+            <th>거절</th>
+         </tr>
+      </thead>
+      <tbody class="search row">
+         
+         <c:choose>
+         
+            <c:when test="${empty list }">
+               <tr>
+                  <td colspan="8">사업자목록이 없습니다.</td>
+               </tr>
+            </c:when>
+            
+            <c:when test="${not empty list }">
+               <c:forEach var="sDTO" items="${list }">
+                        <tr>
+                           <td>${sDTO.sNo }</td>
+                           <td>${sDTO.sId }</td>
+                           <td><input type="button" value="승인"></td>
+                           <td><input type="button" value="거절"></td>
+                        </tr>
+               </c:forEach>
+            </c:when>
+         </c:choose>
+      </tbody>
+   </table>
 </div>
-</body>
-</html>
-<!-- 정적페이지 포함 -->
+
+<!-- 관리자가 로그인하면 "관리자메뉴"를 표시한다. -->
+
+<!-- 정적인 페이지 포함 -->
 <%@ include file="/WEB-INF/views/template/footer.jsp" %>

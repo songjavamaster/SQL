@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.aopalliance.intercept.MethodInvocation"/>
-    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
     <fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
     <fullyQualifiedTypeName name="net.sf.cglib.proxy.MethodInterceptor"/>
     <fullyQualifiedTypeName name="org.aopalliance.intercept.MethodInterceptor"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="org.springframework.dao.DataAccessException"/>
     <fullyQualifiedTypeName name="org.springframework.transaction.annotation.Propagation"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="com.koreait.hotelfive.command.seller.BlackListRequestCommand"/>
+    <fullyQualifiedTypeName name="com.koreait.hotelfive.dto.BlackListDTO"/>
 </qualifiedTypeNameHistroy>

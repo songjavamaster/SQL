@@ -110,6 +110,7 @@ public class MemberController {
       String mPw = request.getParameter("mPw");
       System.out.println(mPw);
       HotelFiveDAO hDAO =  sqlSession.getMapper(HotelFiveDAO.class);
+     //쿼리실행 할려고 하는 구문.
       MemberDTO mDTO = hDAO.login(mId, mPw);
       JSONObject obj = new JSONObject();
       

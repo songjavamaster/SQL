@@ -1,9 +1,9 @@
 package com.koreait.hotelfive.dao;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
+import com.koreait.hotelfive.dto.BlackListDTO;
 import com.koreait.hotelfive.dto.GuestRoomDTO;
 import com.koreait.hotelfive.dto.HotelDTO;
 import com.koreait.hotelfive.dto.MemberDTO;
@@ -14,6 +14,7 @@ import com.koreait.hotelfive.dto.ReservationDTO;
 import com.koreait.hotelfive.dto.ReservationViewDTO;
 import com.koreait.hotelfive.dto.ReviewDTO;
 import com.koreait.hotelfive.dto.SellerDTO;
+
 
 public interface HotelFiveDAO {
    
@@ -305,5 +306,11 @@ public interface HotelFiveDAO {
    
    //사업자 비밀번호 변경
    public int changeSellerPw(String sPw, String sId);
+   
+   //사업자 블랙리스트 요청 void=보낼값이 없을때 쓰면됨.
+   public void blacklist1(BlackListDTO bDTO);
+   //6.아까 넣은 bDTO도 가지고 왔어요. hotelfive.xml로 가서 아이디가 blacklist1를 찾고!
 
+   //관리자 블랙리스트 리스트 불러오기
+   public ArrayList<BlackListDTO> mright();
 }

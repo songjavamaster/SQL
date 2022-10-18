@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.koreait.hotelfive.command.Command;
+import com.koreait.hotelfive.command.seller.BlackListRequestCommand;
 import com.koreait.hotelfive.command.seller.EmailSellerAuthCommand;
 import com.koreait.hotelfive.command.seller.SellerMainCommand;
 import com.koreait.hotelfive.dao.HotelFiveDAO;
@@ -175,5 +176,19 @@ public class SellerController {
 	@RequestMapping("changeSellerPwPage")
 	public String goChangePwPage() {
 		return "seller/changeSellerPwPage";
+	}
+	
+	//블랙리스트 요청
+	//4.blacklistrequest에 해당하는 컨트롤러로 옴!!
+	@RequestMapping("blacklistrequest")
+	public String blacklistrequest(HttpServletRequest request, Model model) {
+		//1)서밋에서 가져온 값은 request에 있음.
+		 model.addAttribute("request", request);
+		 //2)(밑에보세요)커맨드에서 리퀘스트를 가져가기 위해서 model에 request를 넣어줌
+		 //2)커맨드에서 model을 받음
+		command = new BlackListRequestCommand();
+		//3)BlackListRequestCommand만들고 이동>>>
+		command.execute(sqlSession, model);
+		return "seller/blackList";
 	}
 }

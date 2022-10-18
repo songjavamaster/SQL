@@ -558,5 +558,16 @@
       <update id="changeSellerPw">
       UPDATE SELLER SET SPW = #{param1} WHERE SID = #{param2}
    </update>
-   
+   <!-- ****************************************************************************************************************************************************************** -->
+   <!-- 사업자 블랙리스트 요청 -->
+   <insert id="blacklist1" parameterType="com.koreait.hotelfive.dto.BlackListDTO">
+   	INSERT INTO BLACKLIST(MID, BREASON, BRIGHT) VALUES(#{mId}, #{bReason}, 0) 
+   </insert>
+<!-- 7.가져온 값(bDTO=blacklistDTO에 넣어준)을 쓰기위해 가져옴  -->
+   <!-- ****************************************************************************************************************************************************************** -->
+   <!-- 관리자 블랙리스트 승인/리스트 불러오기 -->
+   <select id="mright"
+      resultType="com.koreait.hotelfive.dto.BlackListDTO">
+      SELECT * FROM BLACKLIST WHERE BRIGHT = 0
+   </select>
 </mapper>
