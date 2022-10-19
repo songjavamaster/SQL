@@ -2,14 +2,15 @@ package com.koreait.hotelfive.dto;
 
 public class BlackListDTO {
 	String mId,bReason;
-	int bRight;
+	int bRight,bNo;
 	 public BlackListDTO() {   }
 
-	   public BlackListDTO(String mId, String bReason, int bRight) {
+	   public BlackListDTO(String mId, String bReason, int bRight,int bNo) {
 		   super();
 	   		this.mId=mId;
 	   		this.bReason=bReason;
 	   		this.bRight=bRight;
+	   		this.bNo=bNo;
 	   }
 
 	public String getmId() {
@@ -34,6 +35,14 @@ public class BlackListDTO {
 
 	public void setbRight(int bRight) {
 		this.bRight = bRight;
+	}
+
+	public int getbNo() {
+		return bNo;
+	}
+
+	public void setbNo(int bNo) {
+		this.bNo = bNo;
 	}
 	
 	

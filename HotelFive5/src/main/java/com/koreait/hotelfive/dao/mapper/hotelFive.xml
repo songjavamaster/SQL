@@ -561,7 +561,7 @@
    <!-- ****************************************************************************************************************************************************************** -->
    <!-- 사업자 블랙리스트 요청 -->
    <insert id="blacklist1" parameterType="com.koreait.hotelfive.dto.BlackListDTO">
-   	INSERT INTO BLACKLIST(MID, BREASON, BRIGHT) VALUES(#{mId}, #{bReason}, 0) 
+   	INSERT INTO BLACKLIST(BNO,MID, BREASON, BRIGHT) VALUES((SELECT IFNULL(MAX(BNO) + 1, 1) FROM BLACKLIST AS b),#{mId}, #{bReason}, 0) 
    </insert>
 <!-- 7.가져온 값(bDTO=blacklistDTO에 넣어준)을 쓰기위해 가져옴  -->
    <!-- ****************************************************************************************************************************************************************** -->
@@ -570,4 +570,13 @@
       resultType="com.koreait.hotelfive.dto.BlackListDTO">
       SELECT * FROM BLACKLIST WHERE BRIGHT = 0
    </select>
+   
+   <update id="blackagree">
+      UPDATE BLACKLIST SET BRIGHT= 1 WHERE BNO = #{bNo}
+   </update>
+   
+   <delete id="blackdisagree" parameterType="int">
+      DELETE FROM BLACKLIST WHERE BNO = #{bNo}
+   </delete>
+   
 </mapper>

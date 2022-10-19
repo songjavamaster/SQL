@@ -313,4 +313,8 @@ public interface HotelFiveDAO {
 
    //관리자 블랙리스트 리스트 불러오기
    public ArrayList<BlackListDTO> mright();
+   
+   public void blackagree(int bNo);
+   
+   public void blackdisagree(int bNo);
 }

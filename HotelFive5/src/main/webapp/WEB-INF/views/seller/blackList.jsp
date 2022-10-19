@@ -36,6 +36,7 @@ function request(){
 		black.submit(); /*3.서밋을 하면 폼테그 안에 정보를 가지고 액션에 있는 블랙리스트리퀘스트로 간다.  */
 		alert("블랙 리스트 등록요청을 완료했습니다.");
 	} else{
+		
 	}	
 }
 
@@ -71,6 +72,7 @@ black.submit)를 실행하기 위한 메소드  앞에있는 black이 아까 폼
 	<td><input type="text" id="userid" name="userid"/></td>
 	<td><input type="text" id="reason"  name="reason"/></td>
 	<td><input type="button" id="delete" onclick="request()" value="등록요청"></td>
+	<td><input type="button" id="reset" onclick="request()" value="등록취소"></td>
 	</tr>
 	</table>
 	</div>
