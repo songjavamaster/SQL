@@ -621,7 +621,7 @@ public class MemberController {
             return "redirect:adminSellerList";
          }
          
-         //블랙리스트관련
+         //블랙리스트관련 - 승현 , 인재
          @RequestMapping(value = "adminBlack")
      	public String adminBlack(HttpServletRequest request, Model model) {
      		command = new AdminblacklistCommand();
@@ -629,7 +629,7 @@ public class MemberController {
      		return "admin/adminAdmission";
      	}
 
-        //블랙리스트관련
+        //블랙리스트관련 - 승현 , 인재
      	@RequestMapping(value = "blackagree")
      	public String blackagree(HttpServletRequest request, Model model) {
      		model.addAttribute("request", request);
@@ -638,8 +638,7 @@ public class MemberController {
      		return "redirect:adminBlack";
      	}
      	
-        //블랙리스트관련
-
+        //블랙리스트관련 - 승현 , 인재
      	@RequestMapping(value = "blackdisagree")
      	public String blackdisagree(HttpServletRequest request, Model model) {
      		model.addAttribute("request", request);

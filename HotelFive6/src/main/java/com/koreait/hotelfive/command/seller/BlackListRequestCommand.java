@@ -16,7 +16,7 @@ public class BlackListRequestCommand implements Command {
    @Override
    public void execute(SqlSession sqlSession, Model model) {
       // 5.BlackListRequestCommand로 들어왔음.
-      Map<String, Object> map = model.asMap();//맵을 인덱스 순으로 정렬
+      Map<String, Object> map = model.asMap();//맵을 인덱스 순으로 정렬  asMap으로 변환해주는 메소드 Map형태로 변환하는 이유는 <String, Object>방식으로 map 안에 값을 가져고기 위함.
       HttpServletRequest request = (HttpServletRequest) map.get("request");
       // 1)아까 2) model에 넣어준 request를 빼내는 작업입니다.
       BlackListDTO bDTO = new BlackListDTO();
