@@ -45,9 +45,9 @@ a {
    if (beInserted == 'true') {
       var insertNoticeResult = '${insertNoticeResult}';
       if (insertNoticeResult == 1) {
-         alert('삽입성공');
+         alert('공지 등록 완료');
       } else {
-         alert('삽입실패');
+         alert('공지 등록 실패');
       }
    }
 </script>

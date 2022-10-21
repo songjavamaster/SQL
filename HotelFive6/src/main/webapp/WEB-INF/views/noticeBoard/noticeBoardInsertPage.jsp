@@ -58,6 +58,7 @@
 
 <div class="noticeInsertBox" >
 	<img id="writing_name" alt="writing_name" src="resources/assets/name_img/writing_name2.png"/><br/>
+	<!-- enctype="이미지를 올릴 때는 enctype="multipart/form-data"" -->
 	<form action="noticeBoardInsert" method="POST" enctype="multipart/form-data">
 		<table class="name-title">
 			<tr>
@@ -66,7 +67,7 @@
 			</tr>
 			<tr>
 				<td>TITLE</td>
-				<td><input type="text" name="nTitle" /></td>
+				<td><input type="text" name="nTitle"  /></td>
 			</tr> 
 		</table>
 		<table class="content">

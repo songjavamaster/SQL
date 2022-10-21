@@ -336,7 +336,7 @@
 	<select id="selectNoticeBoardList"
 		resultType="com.koreait.hotelfive.dto.NoticeDTO">
 		SELECT NNO, MID, NTITLE, NNOTICEDATE, NHIT, NISDELETE FROM NOTICE N,
-		member M WHERE N.NISDELETE =0 AND M.MNO =1 ORDER BY NNO DESC LIMIT
+		member M WHERE N.NISDELETE =0 AND M.MNO =0 ORDER BY NNO DESC LIMIT
 		#{beginRecord2},5;
 		<!-- NISDELETE 1:삭제 0:존재 -->
 	</select>

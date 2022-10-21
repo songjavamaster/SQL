@@ -30,7 +30,7 @@ public class BlackListRequestCommand implements Command {
       HotelFiveDAO hDAO = sqlSession.getMapper(HotelFiveDAO.class);
       // ex sqlSession.getMapper(HotelFiveDAO.class를 = hDAO에 집어넣고
       hDAO.blacklist1(bDTO);
-      //sqlSession.getMapper(HotelFiveDAO.class)는 hDAO에서 blacklist1을 찾을수 있게 하는 메소드
+      //sqlSession.getMapper(HotelFiveDAO.class)는 hDAO에서 blacklist1을 찾을수 있게 하는 메소드 ( 찾을수 있게 한다기 보단 sqlSession을 써서 쿼리를 이용할려고 sqlSession)
       // 4)hDAO에 있는 쿼리인 blacklist1을 따지고 보면 매핑을 해주는건데 위에서 만든 bDTO도 같이 데려가요.
 
    }

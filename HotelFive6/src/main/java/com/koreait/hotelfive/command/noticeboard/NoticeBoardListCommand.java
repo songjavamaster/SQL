@@ -23,15 +23,17 @@ public class NoticeBoardListCommand implements Command {
 		Map<String, Object> mMap = model.asMap();
 		HttpServletRequest request = (HttpServletRequest) mMap.get("request");
 		int page = 1;
-		if (request.getParameter("page") != null) {
+		if (request.getParameter("page") != null) { 
+			//만약에 request안에 page가 있다면 page에 request에서 받은 page로 바꿔라
 			page = Integer.parseInt(request.getParameter("page"));
 		 }
 			
 		int recordPerPage = 5;
+		//한페이지당 5개까지 받을 수 있음 -> 
 //		int beginRecord = ( page-1 ) * recordPerPage + 1;
 //		int endRecord = beginRecord + recordPerPage - 1;
 		int beginRecord2 = ( page-1 ) * recordPerPage ;
-
+		// 0,5,10
 		Map<String, Integer> map = new HashMap<String, Integer>();
 	    map.put("beginRecord2", beginRecord2);
 

@@ -34,7 +34,7 @@ public class NoticeBoardInsertCommand implements Command {
 		
 		System.out.println(originFilename+","+originImgFilename);
 		
-		// 원래 파일명에서 확장자 분리 
+		// 원래 파일명에서 확장자 분리 1
 		String fileExtName = originFilename.substring(originFilename.lastIndexOf(".") + 1);
 		String imgFileExtName = originImgFilename.substring(originImgFilename.lastIndexOf(".") + 1);
 		
