@@ -12,6 +12,8 @@ public class BlackListDTO {
             this.bRight=bRight;
             this.bNo=bNo;
       }
+      
+
 
    public String getmId() {
       return mId;

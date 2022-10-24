@@ -592,3 +592,13 @@
 
 10월 21, 2022 10:41:49.827 NEW SESSION
 10월 21, 2022 10:41:49.827 [520:9632:1021/104149.826:ERROR:device_event_log_impl.cc(214)] [10:41:49.826] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+
+10월 22, 2022 12:37:43.826 NEW SESSION
+10월 22, 2022 12:37:43.826 [4896:9348:1022/123743.825:ERROR:device_event_log_impl.cc(214)] [12:37:43.824] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+10월 22, 2022 13:14:40.30 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+10월 22, 2022 13:14:40.186 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+10월 22, 2022 15:06:41.895 [1388:7528:1022/150641.895:ERROR:device_event_log_impl.cc(214)] [15:06:41.896] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+10월 22, 2022 15:08:51.170 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+
+10월 24, 2022 09:41:28.624 NEW SESSION
+10월 24, 2022 09:41:28.624 [2844:8916:1024/094128.623:ERROR:device_event_log_impl.cc(214)] [09:41:28.623] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.

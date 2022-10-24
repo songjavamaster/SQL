@@ -48,14 +48,19 @@ public class NoticeBoardInsertCommand implements Command {
 						
 						// 2) 업로드
 						// 파일이 저장될 서버 내 경로 (/resources/assets/notice_files)를 알아낸다.
+						
+						
 						String realPath = mr.getSession().getServletContext().getRealPath("/resources/assets/notice_files");
 						
 						// /resources/assets/notice_files경로가 존재하지 않으면 필요한 경로(디렉토리)를 만든다.
 						File directory = new File(realPath);
+						//exists() -> 있으면 true 없으면 false
+						//! -> not 즉 부정을 의미 -> 디렉토리가 존재하지 않는다면
 						if ( !directory.exists() ) {
+							//mkdirs() -> file 만들어라
 							directory.mkdirs();
 						}
-			
+						// originalFilename == "" 있다면,originFilename != "" -> 없다면을 의미 
 						if ( originFilename != "") {
 							
 								// 1) 저장할 파일 이름 만들기
@@ -73,7 +78,7 @@ public class NoticeBoardInsertCommand implements Command {
 						}
 						if ( originImgFilename != "") {
 						
-								// 이미지 파일
+								// 이미지 파일을 
 								nImg = originImgFilename.substring(0, originImgFilename.lastIndexOf(".")) +
 									   "_" +
 									   System.currentTimeMillis() +
@@ -88,8 +93,8 @@ public class NoticeBoardInsertCommand implements Command {
 						}
 						
 						HotelFiveDAO hDAO = sqlSession.getMapper(HotelFiveDAO.class);
-						rttr.addFlashAttribute("insertNoticeResult", hDAO.insertNoticeBoard(mNo, nTitle, nContent, nFilename, nImg));
-						rttr.addFlashAttribute("beInserted", "true");
+						rttr.addAttribute("insertNoticeResult", hDAO.insertNoticeBoard(mNo, nTitle, nContent, nFilename, nImg));
+						rttr.addAttribute("beInserted", "true");
 						
 					
 				} catch(Exception e) {

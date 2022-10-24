@@ -60,6 +60,7 @@ a {
 <div class="noticeListBox">
    <img id="notice_name" alt="notice_name" src="resources/assets/name_img/notice_name2.png"/><br/><br><br>
    <c:if test="${loginDTO.mRight eq 1 }">
+   <!-- 관리자가 로그인 했을경우 게시물 작성 버튼이 활성화가 되고  -->
       <a class="noticeInsertBtn" href='noticeBoardInsertPage'><i class="fas fa-user-edit fa-2x"></i>게시물 작성</a><br/>
    </c:if>
    <table>
