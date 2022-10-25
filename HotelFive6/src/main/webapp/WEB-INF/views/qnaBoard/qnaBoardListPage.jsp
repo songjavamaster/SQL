@@ -206,9 +206,7 @@
                               <input type="hidden" name="qPw" value="${qDTO.qPw }"/>
                            </c:if>
                         </form>
-                        <c:if test="${qDTO.count ne 0 }">
-                           <span style="color:rgb(150,150,250)">[답변등록완료]</span>                           
-                        </c:if>
+                    
                      </td>
                      <c:if test="${qDTO.mId ne null }">
                         <td>${qDTO.mId }</td>
