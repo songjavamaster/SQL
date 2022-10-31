@@ -44,6 +44,11 @@ public class SellerController {
 
 		return "template/sellerSide";
 	}
+	@RequestMapping("sellerLoginform")
+	public String sellerLoginform() {
+
+		return "login/sellerLogin";
+	}
 
 	@RequestMapping("sellerMain")
 	public String goSellerMainPage(HttpServletRequest request, Model model) {
